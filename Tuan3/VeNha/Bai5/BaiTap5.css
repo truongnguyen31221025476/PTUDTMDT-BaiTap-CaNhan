@@ -1,0 +1,50 @@
+.best-shared {
+    text-align: center;
+}
+
+.btn-list a {
+    text-decoration: none;
+}
+
+.best-shared {
+    font-family: Arial, sans-serif;
+    margin: 30px auto;
+}
+
+.logo {
+    margin-bottom: 25px;
+}
+
+.best-shared h2 {
+    font-size: 45px;
+    font-weight: normal;
+    margin: 0 0 25px;
+}
+
+.best-shared strong {
+    color: #00aeef;
+    font-weight: 600;
+}
+
+.lead-text {
+    margin-bottom: 40px;
+}
+
+.btn-list {
+    list-style: none;
+    padding: 0;
+}
+
+.btn-list li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.btn-list a {
+    display: inline-block;
+    width: 170px;
+    line-height: 56px;
+    background-color: #2d3032;
+    color: white;
+    border-radius: 4px;
+}
