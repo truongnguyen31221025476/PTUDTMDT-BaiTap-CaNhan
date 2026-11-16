@@ -1,4 +1,4 @@
-# Bài tập cá nhân Buổi 2 – Phát triển ứng dụng TMĐT
+# Bài tập cá nhân - Tuần 2
 
 ## 1. Giới thiệu
 
@@ -27,19 +27,20 @@ Bài tập tiếp tục phát triển trang chi tiết sản phẩm Mena Select 
 ## 4. Hướng dẫn chạy
 
 1. Tải hoặc clone repository, giữ nguyên các thư mục tài nguyên.
-2. Mở thư mục dự án và mở `index.html` bằng Chrome. Có thể dùng Live Server trong VS Code.
+2. Mở `VeNha/index.html` bằng Chrome. Có thể dùng Live Server trong VS Code.
 3. Trong `head`, trang dùng duy nhất `<link rel="stylesheet" href="css/style.css">`.
 4. Khi sửa CSS, lưu tệp rồi tải lại bằng `Ctrl+Shift+R`.
 
 | Đường dẫn | Nội dung |
 |---|---|
-| `index.html` | Trang HTML kế thừa từ Buổi 1 và cấu trúc danh sách đã chỉnh. |
-| `css/style.css` | Tệp CSS đầy đủ đang sử dụng. Tệp `styles.css` cũ ở gốc đã được xóa. |
-| `assets/` | Ảnh, logo và font đã có. Đường dẫn font từ CSS bắt đầu bằng `../assets/fonts/`. |
-| `screenshots/` | Ảnh trước, sau và các minh chứng kiểm tra. |
-| `AI_USAGE.md` | Nhật ký chứa đầy đủ prompt, phản hồi và phần kiểm tra, điều chỉnh. |
-| `TESTING.md` | Kết quả kiểm thử và hạn chế còn lại. |
-| `bao_cao/BaoCao_Buoi2_HTML5_CSS3.docx` | Báo cáo theo từng bước và các câu hỏi kiến thức. |
+| `VeNha/index.html` | Trang HTML kế thừa từ Buổi 1 và cấu trúc danh sách đã chỉnh. |
+| `VeNha/css/style.css` | Tệp CSS đầy đủ đang sử dụng. Tệp `styles.css` cũ ở gốc phần bài làm đã được xóa. |
+| `VeNha/assets/` | Ảnh, logo và font đã có. Đường dẫn font từ CSS bắt đầu bằng `../assets/fonts/`. |
+| `VeNha/screenshots/` | Ảnh trước, sau và các minh chứng kiểm tra. |
+| `VeNha/AI_USAGE.md` | Nhật ký chứa đầy đủ prompt, phản hồi và phần kiểm tra, điều chỉnh. |
+| `VeNha/TESTING.md` | Kết quả kiểm thử và hạn chế còn lại. |
+| [BaoCao_Buoi2_HTML5_CSS3.docx](VeNha/reports/BaoCao_Buoi2_HTML5_CSS3.docx) | Báo cáo theo từng bước và các câu hỏi kiến thức. |
+| [BaiTap_CaNhan_Buoi2.docx](VeNha/reports/BaiTap_CaNhan_Buoi2.docx) | Tài liệu Word của bài tập Buổi 2. |
 
 ## 5. Những thay đổi đã thực hiện
 
@@ -55,12 +56,12 @@ Bài tập tiếp tục phát triển trang chi tiết sản phẩm Mena Select 
 
 Minh chứng chính:
 
-- [Giao diện trước](screenshots/buoi2_buoc1_before_desktop.png).
-- [Giao diện sau ở desktop](screenshots/buoi2_buoc8_desktop_1366.png).
-- [Cấu trúc HTML](screenshots/buoi2_buoc2_html_structure.png).
-- [Flexbox](screenshots/buoi2_buoc5_flexbox.png) và [thử Grid hai cột](screenshots/buoi2_buoc6_grid_2_cot.png).
-- [Hover](screenshots/buoi2_buoc7_hover.png), [focus nút](screenshots/buoi2_buoc7_focus.png), [focus ảnh sau sửa](screenshots/buoi2_buoc8_photo_focus_after.png).
-- [Tablet](screenshots/buoi2_buoc8_tablet_768.png) và [mobile](screenshots/buoi2_buoc8_mobile_390.png).
+- [Giao diện trước](VeNha/screenshots/buoi2_buoc1_before_desktop.png).
+- [Giao diện sau ở desktop](VeNha/screenshots/buoi2_buoc8_desktop_1366.png).
+- [Cấu trúc HTML](VeNha/screenshots/buoi2_buoc2_html_structure.png).
+- [Flexbox](VeNha/screenshots/buoi2_buoc5_flexbox.png) và [thử Grid hai cột](VeNha/screenshots/buoi2_buoc6_grid_2_cot.png).
+- [Hover](VeNha/screenshots/buoi2_buoc7_hover.png), [focus nút](VeNha/screenshots/buoi2_buoc7_focus.png), [focus ảnh sau sửa](VeNha/screenshots/buoi2_buoc8_photo_focus_after.png).
+- [Tablet](VeNha/screenshots/buoi2_buoc8_tablet_768.png) và [mobile](VeNha/screenshots/buoi2_buoc8_mobile_390.png).
 
 Hạn chế còn lại: nút “Xem chi tiết” của thẻ mực làm sạch cuối cùng chưa mở đúng trang theo kết quả kiểm tra. Liên kết được giữ nguyên trong đợt này. Mỗi thẻ vẫn có ba liên kết cùng đích. Tên class `product-card__category` vẫn được giữ theo mã cũ.
 
@@ -68,7 +69,7 @@ Hạn chế còn lại: nút “Xem chi tiết” của thẻ mực làm sạch 
 
 ChatGPT hỗ trợ rà soát phản hồi AI, chuẩn bị mã đầy đủ, tính tương phản và tổng hợp tài liệu. Các phản hồi Claude đã được cung cấp trong quá trình thực hành cũng được giữ trong nhật ký. Không ghi phiên bản mô hình khi chưa có thông tin xác nhận.
 
-Kết quả được đối chiếu với mã nguồn, ảnh DevTools, thao tác chuột và bàn phím, cùng các ảnh Responsive. Nội dung prompt và phản hồi được giữ trực tiếp trong [AI_USAGE.md](AI_USAGE.md).
+Kết quả được đối chiếu với mã nguồn, ảnh DevTools, thao tác chuột và bàn phím, cùng các ảnh Responsive. Nội dung prompt và phản hồi được giữ trực tiếp trong [AI_USAGE.md](VeNha/AI_USAGE.md).
 
 | CSS viewport đã chụp | Kết quả trong phạm vi ảnh |
 |---|---|
@@ -78,12 +79,12 @@ Kết quả được đối chiếu với mã nguồn, ảnh DevTools, thao tác
 
 Các điều chỉnh sau đối chiếu gồm giữ `contain` thay cho gợi ý `cover`, giữ bố cục responsive thay cho hai cột cố định, sửa nhận định rằng `inline-flex` luôn làm nút co vừa nội dung, và giữ offset ảnh `-4px` sau khi quan sát ảnh kiểm tra. Hai cặp màu chữ và nền của liên kết chi tiết được tính lại, cho tỷ lệ xấp xỉ `9,25:1` ở trạng thái thường và `8,43:1` ở hover/focus-visible.
 
-Chi tiết kết quả, gồm liên kết chưa đạt, có trong [TESTING.md](TESTING.md). Chưa thực hiện kiểm thử bằng trình đọc màn hình, Nu HTML Checker, axe hoặc Lighthouse trong đợt này.
+Chi tiết kết quả, gồm liên kết chưa đạt, có trong [TESTING.md](VeNha/TESTING.md). Chưa thực hiện kiểm thử bằng trình đọc màn hình, Nu HTML Checker, axe hoặc Lighthouse trong đợt này.
 
 ## 7. Đường dẫn dự án
 
-- Repository: https://github.com/truongnguyen31221025476/mena-select-ui-improvement
-- Website đã triển khai: chưa xác minh đường dẫn truy cập của bản cập nhật này. Có thể chạy cục bộ bằng `index.html`.
+- Repository: [PTUDTMDT-BaiTap-CaNhan](https://github.com/truongnguyen31221025476/PTUDTMDT-BaiTap-CaNhan).
+- GitHub Pages: [Bài tập Tuần 2](https://truongnguyen31221025476.github.io/PTUDTMDT-BaiTap-CaNhan/Tuan2/VeNha/).
 
 ### Câu hỏi kiến thức
 
