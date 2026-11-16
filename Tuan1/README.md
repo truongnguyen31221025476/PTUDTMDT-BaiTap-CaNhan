@@ -20,14 +20,24 @@ Cải tiến một trang chi tiết sản phẩm Mena Select, tập trung khung 
 - Không dùng JavaScript, backend, cơ sở dữ liệu hoặc thư viện ngoài.
 
 ## 5. Cách chạy
-Giải nén và mở index.html bằng trình duyệt. Giữ nguyên styles.css và thư mục assets.
+Mở `VeNha/index.html` bằng trình duyệt. CSS nằm tại `VeNha/css/style.css`, tài nguyên giao diện nằm trong `VeNha/assets/`.
+
+### Tổ chức tệp
+
+| Đường dẫn | Nội dung |
+|---|---|
+| `VeNha/index.html` | Trang bài tập. |
+| `VeNha/css/style.css` | CSS của trang. |
+| `VeNha/assets/` | Ảnh, logo và font. |
+| `VeNha/screenshots/` | Ảnh minh chứng. |
+| `VeNha/reports/` | Các tệp báo cáo Word. |
 
 ## 6. Cải tiến đã thực hiện
 Tối ưu vùng hiển thị ảnh; tách mô tả khỏi cột ảnh; nhóm thông tin mua hàng; giữ header, footer và danh mục. Bỏ nhãn phụ, giảm khoảng trống và sửa tràn ngang trong thanh điều hướng.
 
-Ảnh giao diện: [máy tính](screenshots/desktop.jpg), [điện thoại](screenshots/mobile.jpg), [trước điều chỉnh](screenshots/before.jpg), [sau điều chỉnh](screenshots/after.jpg).
+Ảnh giao diện: [máy tính](VeNha/screenshots/desktop.jpg), [điện thoại](VeNha/screenshots/mobile.jpg), [trước điều chỉnh](VeNha/screenshots/before.jpg), [sau điều chỉnh](VeNha/screenshots/after.jpg).
 
 ## 7. Hỗ trợ từ AI
-Gemini hỗ trợ phân tích website. ChatGPT hỗ trợ thiết kế, tạo và sửa mã, kiểm tra giao diện và chuẩn bị báo cáo. Sinh viên phản hồi về bố cục, ảnh, nhãn phụ, khoảng cách và nút chia sẻ. Nhật ký trong AI_USAGE.md, kết quả kiểm tra trong TESTING.md.
+Gemini hỗ trợ phân tích website. ChatGPT hỗ trợ thiết kế, tạo và sửa mã, kiểm tra giao diện và chuẩn bị báo cáo. Sinh viên phản hồi về bố cục, ảnh, nhãn phụ, khoảng cách và nút chia sẻ. Nhật ký trong [AI_USAGE.md](VeNha/AI_USAGE.md), kết quả kiểm tra trong [TESTING.md](VeNha/TESTING.md).
 
-Ảnh, logo, phông chữ và nội dung tham khảo được dẫn nguồn trong NGUON_THAM_KHAO.md.
+Ảnh, logo, phông chữ và nội dung tham khảo được dẫn nguồn trong [NGUON_THAM_KHAO.md](VeNha/NGUON_THAM_KHAO.md).
