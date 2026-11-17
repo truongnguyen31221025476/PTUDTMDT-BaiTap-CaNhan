@@ -64,6 +64,7 @@ h3 { font-size: 19px; line-height: 1.5; margin-bottom: 12px; }
 .skip:focus { top: 10px; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 64px; align-items: center; padding: 58px 32px; }
 .hero-copy { min-width: 0; }
+.hero-copy h1, .section-heading h2, .reflection > h2 { text-align: center; }
 .eyebrow { color: #18574a; font-size: 12px; font-weight: 600; line-height: 1.8; margin-bottom: 18px; }
 .hero-description, .lead { color: #52635a; font-size: 16px; line-height: 1.85; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 30px; }
@@ -96,7 +97,7 @@ h3 { font-size: 19px; line-height: 1.5; margin-bottom: 12px; }
 .outcomes { background: #e9eee4; }
 .lab-label { margin-bottom: 7px; color: #18574a !important; font-size: 13px !important; font-weight: 600; }
 .outcome-grid article p:last-child { margin-bottom: 0; }
-.reflection p { max-width: 80ch; margin-bottom: 0; color: #52635a; line-height: 1.9; font-size: 16px; }
+.reflection p { max-width: 80ch; margin-inline: auto; margin-bottom: 0; text-align: justify; color: #52635a; line-height: 1.9; font-size: 16px; }
 .site-footer { display: flex; justify-content: space-between; gap: 16px; padding: 24px 32px 32px; border-top: 1px solid #d9ded5; color: #52635a; font-size: 13px; }
 .site-footer a { text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; }
