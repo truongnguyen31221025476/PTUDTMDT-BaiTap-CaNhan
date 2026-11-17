@@ -1,1 +1,50 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="JavaScript Labs của Nguyễn Văn Trường, sinh viên UEH."><title>Exercise 8.1 | Nguyễn Văn Trường</title><link rel="stylesheet" href="../../css/style.css"><script src="../../js/main.js" defer></script></head><body><a class="skip" href="#content">Đến nội dung</a><header class="site-header"><a class="brand" href="../../index.html"><span class="brand-mark">VT</span><span>VĂN TRƯỜNG<small>JAVASCRIPT LABS</small></span></a><button class="menu-button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav id="site-nav" class="nav-links" aria-label="Điều hướng chính"><a href="../../index.html">Tổng quan</a><a href="../../Lab08/index.html">Lab 08</a><a href="../../Lab09/index.html">Lab 09</a><a href="../../Lab10/index.html">Lab 10</a><a href="https://github.com/truongnguyen31221025476" target="_blank" rel="noopener">GitHub cá nhân ↗</a></nav></header><main id="content" class="page-main narrow"><a class="back-link" href="../index.html">← Lab 08</a><p class="eyebrow">EXERCISE 8.1</p><h1>Enabling/Disabling JavaScript</h1><p class="lead">Đã thực hiện hai trạng thái bật và tắt JavaScript trong trình duyệt. Trang dịch vụ của giáo trình trả HTTP 502 ở cả hai lần thử, nên chưa quan sát được thông báo enabled/disabled từ dịch vụ.</p><a class="button secondary" href="http://examples.funwebdev.com/JavaScriptTest.php" target="_blank" rel="noopener">URL trong giáo trình ↗</a><figure class="evidence"><a href="../screenshots/8.1a-javascript-enabled-http502.png" target="_blank" rel="noopener"><img src="../screenshots/8.1a-javascript-enabled-http502.png" alt="Disable JavaScript bỏ chọn và trang dịch vụ báo HTTP 502" loading="lazy"></a><figcaption>Hình 8.1a. JavaScript bật: Disable JavaScript bỏ chọn; trang dịch vụ báo HTTP 502.</figcaption></figure><figure class="evidence"><a href="../screenshots/8.1b-javascript-disabled-http502.png" target="_blank" rel="noopener"><img src="../screenshots/8.1b-javascript-disabled-http502.png" alt="Disable JavaScript được chọn và trang dịch vụ báo HTTP 502" loading="lazy"></a><figcaption>Hình 8.1b. JavaScript tắt: Disable JavaScript được chọn; trang dịch vụ vẫn báo HTTP 502.</figcaption></figure><p class="muted">Ảnh ghi nhận thao tác và trở ngại thực tế. Không trình bày lỗi HTTP 502 thành thông báo kiểm tra thành công của dịch vụ.</p><a class="text-link" href="../Lab08.pdf">Xem Lab08.pdf</a></main><footer class="site-footer"><span>Nguyễn Văn Trường · 31221025476</span><a href="../../index.html">JavaScript Labs</a><span>UEH · Thương mại điện tử</span></footer></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bài thực hành JavaScript của Nguyễn Văn Trường, MSSV 31221025476.">
+  <title>Exercise 8.1 | Nguyễn Văn Trường</title>
+  <link rel="preload" href="../../fonts/noto-sans-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../css/style.css">
+  <script src="../../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="../../index.html">
+      <span class="brand-mark" aria-hidden="true">VT</span>
+      <span>Văn Trường<small>JavaScript Labs</small></span>
+    </a>
+    <button class="menu-button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="nav-links" aria-label="Điều hướng chính">
+      <a href="../../index.html">Trang chủ</a>
+      <a href="../../Lab08/index.html" aria-current="page">Lab 08</a>
+      <a href="../../Lab09/index.html">Lab 09</a>
+      <a href="../../Lab10/index.html">Lab 10</a>
+      <a href="https://github.com/truongnguyen31221025476" target="_blank" rel="noopener">GitHub cá nhân</a>
+    </nav>
+  </header>
+  <main id="content" class="page-main narrow">
+    <a class="back-link" href="../index.html">Về Lab 08</a>
+    <p class="eyebrow">Exercise 8.1</p>
+    <h1>Enabling/Disabling JavaScript</h1>
+    <p class="lead">Đã thử bật và tắt JavaScript theo hướng dẫn. Trang kiểm tra trong giáo trình báo HTTP 502 ở cả hai lần, nên chưa nhận được thông báo enabled hoặc disabled từ dịch vụ.</p>
+    <a class="button secondary" href="http://examples.funwebdev.com/JavaScriptTest.php" target="_blank" rel="noopener">Mở trang kiểm tra</a>
+    <figure class="evidence">
+      <a href="../screenshots/8.1a-javascript-enabled-http502.png" target="_blank" rel="noopener"><img src="../screenshots/8.1a-javascript-enabled-http502.png" alt="Disable JavaScript bỏ chọn, trang dịch vụ báo HTTP 502" loading="lazy"></a>
+      <figcaption>Hình 8.1a. JavaScript bật, mục Disable JavaScript bỏ chọn. Trang dịch vụ báo HTTP 502.</figcaption>
+    </figure>
+    <figure class="evidence">
+      <a href="../screenshots/8.1b-javascript-disabled-http502.png" target="_blank" rel="noopener"><img src="../screenshots/8.1b-javascript-disabled-http502.png" alt="Disable JavaScript được chọn, trang dịch vụ báo HTTP 502" loading="lazy"></a>
+      <figcaption>Hình 8.1b. JavaScript tắt, mục Disable JavaScript được chọn. Trang dịch vụ vẫn báo HTTP 502.</figcaption>
+    </figure>
+    <a class="text-link" href="../Lab08.pdf">Xem tài liệu Lab 08</a>
+  </main>
+  <footer class="site-footer">
+    <span>Nguyễn Văn Trường · 31221025476</span>
+    <a href="https://github.com/truongnguyen31221025476/PTUDTMDT-BaiTap-CaNhan" target="_blank" rel="noopener">Mã nguồn GitHub</a>
+  </footer>
+</body>
+</html>

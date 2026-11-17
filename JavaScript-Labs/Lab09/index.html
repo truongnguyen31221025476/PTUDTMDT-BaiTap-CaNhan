@@ -1,1 +1,121 @@
-<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="JavaScript Labs của Nguyễn Văn Trường, sinh viên UEH."><title>Lab 09 | Nguyễn Văn Trường</title><link rel="stylesheet" href="../css/style.css"><script src="../js/main.js" defer></script></head><body><a class="skip" href="#content">Đến nội dung</a><header class="site-header"><a class="brand" href="../index.html"><span class="brand-mark">VT</span><span>VĂN TRƯỜNG<small>JAVASCRIPT LABS</small></span></a><button class="menu-button" aria-controls="site-nav" aria-expanded="false">Menu</button><nav id="site-nav" class="nav-links" aria-label="Điều hướng chính"><a href="../index.html">Tổng quan</a><a href="../Lab08/index.html">Lab 08</a><a href="../Lab09/index.html">Lab 09</a><a href="../Lab10/index.html">Lab 10</a><a href="https://github.com/truongnguyen31221025476" target="_blank" rel="noopener">GitHub cá nhân ↗</a></nav></header><main id="content" class="page-main"><a class="back-link" href="../index.html">← Tổng quan</a><section class="lab-intro"><div><p class="eyebrow">LAB 09</p><h1>DOM & Events</h1><p class="lead">Thao tác DOM, đăng ký sự kiện, kiểm tra dữ liệu biểu mẫu và dùng công cụ gỡ lỗi.</p></div><a class="button secondary" href="Lab09.pdf">Giáo trình PDF ↗</a></section><div class="source-note"><strong>Các bài dùng chung trang gốc</strong><p>Exercise 05–06 tiếp nối trên trang DOM Timing. Exercise 05 xử lý khi trang tải xong; Exercise 06 tiếp tục với mouseover và gỡ lỗi đối tượng sự kiện.</p></div><div class="filter-bar"><label for="exercise-search">Tìm Exercise</label><input id="exercise-search" type="search" placeholder="Nhập số hoặc tên bài" autocomplete="off"><span>8 Exercise</span></div><div class="exercise-grid"><article class="exercise-card" data-exercise="1 Basic DOM Selection"><div class="exercise-label">EXERCISE 9.1<span>Mã nguồn</span></div><h2>Basic DOM Selection</h2><p class="file-path">Lab09/Exercise01/index.html</p><div class="exercise-actions"><a href="Exercise01/index.html">Mở bài ↗</a><a href="Exercise01/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="2 DOM Family Relations"><div class="exercise-label">EXERCISE 9.2<span>Mã nguồn</span></div><h2>DOM Family Relations</h2><p class="file-path">Lab09/Exercise02/index.html</p><div class="exercise-actions"><a href="Exercise02/index.html">Mở bài ↗</a><a href="Exercise02/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="3 Modifying the DOM"><div class="exercise-label">EXERCISE 9.3<span>Mã nguồn</span></div><h2>Modifying the DOM</h2><p class="file-path">Lab09/Exercise03/index.html</p><div class="exercise-actions"><a href="Exercise03/index.html">Mở bài ↗</a><a href="Exercise03/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="4 Simple Event Handling"><div class="exercise-label">EXERCISE 9.4<span>Mã nguồn</span></div><h2>Simple Event Handling</h2><p class="file-path">Lab09/Exercise04/index.html</p><div class="exercise-actions"><a href="Exercise04/index.html">Mở bài ↗</a><a href="Exercise04/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="5 Responding to Load Events"><div class="exercise-label">EXERCISE 9.5<span>Mã nguồn</span></div><h2>Responding to Load Events</h2><p class="file-path">Lab09/Exercise05/index.html</p><div class="exercise-actions"><a href="Exercise05/index.html">Mở bài ↗</a><a href="Exercise05/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="6 Debugging Events"><div class="exercise-label">EXERCISE 9.6<span>Mã nguồn</span></div><h2>Debugging Events</h2><p class="file-path">Lab09/Exercise06/index.html</p><div class="exercise-actions"><a href="Exercise06/index.html">Mở bài ↗</a><a href="Exercise06/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="7 Working with Forms"><div class="exercise-label">EXERCISE 9.7<span>Mã nguồn</span></div><h2>Working with Forms</h2><p class="file-path">Lab09/Exercise07/index.html</p><div class="exercise-actions"><a href="Exercise07/index.html">Mở bài ↗</a><a href="Exercise07/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article><article class="exercise-card" data-exercise="8 Form Validation"><div class="exercise-label">EXERCISE 9.8<span>Mã nguồn</span></div><h2>Form Validation</h2><p class="file-path">Lab09/Exercise08/index.html</p><div class="exercise-actions"><a href="Exercise08/index.html">Mở bài ↗</a><a href="Exercise08/script.js" target="_blank" rel="noopener">Mã JavaScript ↗</a></div></article></div><p id="no-results" hidden>Không có Exercise phù hợp.</p></main><footer class="site-footer"><span>Nguyễn Văn Trường · 31221025476</span><a href="../index.html">JavaScript Labs</a><span>UEH · Thương mại điện tử</span></footer></body></html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bài thực hành JavaScript của Nguyễn Văn Trường, MSSV 31221025476.">
+  <title>Lab 09 | Nguyễn Văn Trường</title>
+  <link rel="preload" href="../fonts/noto-sans-vietnamese.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#content">Đến nội dung</a>
+  <header class="site-header">
+    <a class="brand" href="../index.html">
+      <span class="brand-mark" aria-hidden="true">VT</span>
+      <span>Văn Trường<small>JavaScript Labs</small></span>
+    </a>
+    <button class="menu-button" aria-controls="site-nav" aria-expanded="false">Menu</button>
+    <nav id="site-nav" class="nav-links" aria-label="Điều hướng chính">
+      <a href="../index.html">Trang chủ</a>
+      <a href="../Lab08/index.html">Lab 08</a>
+      <a href="../Lab09/index.html" aria-current="page">Lab 09</a>
+      <a href="../Lab10/index.html">Lab 10</a>
+      <a href="https://github.com/truongnguyen31221025476" target="_blank" rel="noopener">GitHub cá nhân</a>
+    </nav>
+  </header>
+  <main id="content" class="page-main">
+    <a class="back-link" href="../index.html">Về trang chủ</a>
+    <section class="lab-intro">
+      <div><p class="eyebrow">Lab 09</p><h1>JavaScript 2: DOM and Events</h1><p class="lead">Thao tác với phần tử HTML, xử lý sự kiện và kiểm tra biểu mẫu.</p></div>
+      <a class="button secondary" href="Lab09.pdf">Xem tài liệu PDF</a>
+    </section>
+    <div class="filter-bar">
+      <label for="exercise-search">Tìm bài thực hành</label>
+      <input id="exercise-search" type="search" placeholder="Nhập số hoặc tên bài" autocomplete="off">
+      <span>8 bài</span>
+    </div>
+    <div class="exercise-grid">
+        <article class="exercise-card" data-exercise="9.1 Basic DOM Selection Chọn phần tử và thay nội dung, thuộc tính, kiểu hiển thị.">
+          <div class="exercise-label"><span>Exercise 9.1</span><span></span></div>
+          <h2>Basic DOM Selection</h2>
+          <p class="exercise-description">Chọn phần tử và thay nội dung, thuộc tính, kiểu hiển thị.</p>
+          <div class="exercise-actions">
+            <a href="Exercise01/index.html">Mở bài</a>
+            <a href="Exercise01/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.2 DOM Family Relations Truy cập nút cha, nút con và các nút cùng cấp.">
+          <div class="exercise-label"><span>Exercise 9.2</span><span></span></div>
+          <h2>DOM Family Relations</h2>
+          <p class="exercise-description">Truy cập nút cha, nút con và các nút cùng cấp.</p>
+          <div class="exercise-actions">
+            <a href="Exercise02/index.html">Mở bài</a>
+            <a href="Exercise02/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.3 Modifying the DOM Tạo, thêm và xóa phần tử trong DOM.">
+          <div class="exercise-label"><span>Exercise 9.3</span><span></span></div>
+          <h2>Modifying the DOM</h2>
+          <p class="exercise-description">Tạo, thêm và xóa phần tử trong DOM.</p>
+          <div class="exercise-actions">
+            <a href="Exercise03/index.html">Mở bài</a>
+            <a href="Exercise03/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.4 Simple Event Handling Xử lý click, rê chuột và ẩn hiện nội dung.">
+          <div class="exercise-label"><span>Exercise 9.4</span><span></span></div>
+          <h2>Simple Event Handling</h2>
+          <p class="exercise-description">Xử lý click, rê chuột và ẩn hiện nội dung.</p>
+          <div class="exercise-actions">
+            <a href="Exercise04/index.html">Mở bài</a>
+            <a href="Exercise04/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.5 Responding to Load Events Đọc nội dung phần tử sau khi trang tải xong.">
+          <div class="exercise-label"><span>Exercise 9.5</span><span></span></div>
+          <h2>Responding to Load Events</h2>
+          <p class="exercise-description">Đọc nội dung phần tử sau khi trang tải xong.</p>
+          <div class="exercise-actions">
+            <a href="Exercise05/index.html">Mở bài</a>
+            <a href="Exercise05/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.6 Debugging Events Đặt breakpoint và xem đối tượng sự kiện.">
+          <div class="exercise-label"><span>Exercise 9.6</span><span></span></div>
+          <h2>Debugging Events</h2>
+          <p class="exercise-description">Đặt breakpoint và xem đối tượng sự kiện.</p>
+          <div class="exercise-actions">
+            <a href="Exercise06/index.html">Mở bài</a>
+            <a href="Exercise06/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.7 Working with Forms Đổi nền trường nhập khi nhận và mất focus.">
+          <div class="exercise-label"><span>Exercise 9.7</span><span></span></div>
+          <h2>Working with Forms</h2>
+          <p class="exercise-description">Đổi nền trường nhập khi nhận và mất focus.</p>
+          <div class="exercise-actions">
+            <a href="Exercise07/index.html">Mở bài</a>
+            <a href="Exercise07/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+        <article class="exercise-card" data-exercise="9.8 Form Validation Kiểm tra trường trống và hiển thị thông báo lỗi.">
+          <div class="exercise-label"><span>Exercise 9.8</span><span></span></div>
+          <h2>Form Validation</h2>
+          <p class="exercise-description">Kiểm tra trường trống và hiển thị thông báo lỗi.</p>
+          <div class="exercise-actions">
+            <a href="Exercise08/index.html">Mở bài</a>
+            <a href="Exercise08/script.js" target="_blank" rel="noopener">Xem JavaScript</a>
+          </div>
+        </article>
+    </div>
+    <p id="no-results" hidden>Không tìm thấy bài phù hợp.</p>
+  </main>
+  <footer class="site-footer">
+    <span>Nguyễn Văn Trường · 31221025476</span>
+    <a href="https://github.com/truongnguyen31221025476/PTUDTMDT-BaiTap-CaNhan" target="_blank" rel="noopener">Mã nguồn GitHub</a>
+  </footer>
+</body>
+</html>
