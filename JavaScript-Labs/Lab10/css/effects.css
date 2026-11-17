@@ -83,7 +83,7 @@ main figure {
 }
 
 .tiled {
-    background-image:url(../images/stripes.jpg);
+    /* stripes.jpg was not supplied; no assigned Exercise uses this optional background. */
     background-repeat:repeat; 
 }
 
