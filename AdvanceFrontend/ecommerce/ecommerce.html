@@ -37,9 +37,11 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/css/star-rating.min.css">
     <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/themes/krajee-svg/theme.min.css">
     <link rel="stylesheet" href="assets/css/techstore-rating.css">
+    <link rel="stylesheet" href="assets/css/techstore-enhancements.css">
 </head>
 
 <body>
+    <a class="techstore-skip-link" href="#mainContent">Bỏ qua điều hướng, đến nội dung chính</a>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default">
@@ -59,15 +61,14 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="#">
-                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="">
+                <a class="navbar-brand" href="ecommerce.html">
+                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="" decoding="async">
                     <span>TechStore</span>
                 </a>
 
                 <div class="visible-xs-block mobile-search-wrap">
                     <form class="visible-xs-inline-block mobile-search"
-                          role="search"
-                          onsubmit="return false;">
+                          role="search">
                         <div class="form-group">
                             <input type="search"
                                    class="form-control"
@@ -114,8 +115,7 @@
                 </ul>
 
                 <form class="navbar-form navbar-left hidden-xs desktop-search"
-                      role="search"
-                      onsubmit="return false;">
+                      role="search">
                     <div class="form-group">
                         <input type="search"
                                class="form-control"
@@ -132,10 +132,10 @@
 
                     <li>
                         <a href="#"
-                           aria-label="Giỏ hàng, 4 sản phẩm">
+                           aria-label="Giỏ hàng, 0 sản phẩm">
                             <i class="glyphicon glyphicon-shopping-cart"
                                aria-hidden="true"></i>
-                            <span class="badge cart-badge">4</span>
+                            <span class="badge cart-badge">0</span>
                         </a>
                     </li>
 
@@ -183,6 +183,8 @@
     </nav>
 
     <!-- 2.1.3 Make Slider -->
+<main id="mainContent" tabindex="-1">
+    <h1 class="sr-only" id="pageHeading">Cửa hàng công nghệ TechStore</h1>
     <div class="container">
         <div id="carousel-example-generic"
              class="carousel slide tech-carousel"
@@ -305,6 +307,7 @@
             <!-- Product Grid -->
             <div class="col-sm-8 col-md-9">
                 <h3 class="product-title">Sản phẩm nổi bật</h3>
+                <div id="techstoreSearchFeedback" class="techstore-search-feedback" role="status" aria-live="polite" hidden></div>
                 <div class="row techstore-product-grid">
 
                     <!-- Product 1 -->
@@ -313,7 +316,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=laptop" aria-label="Xem chi tiết Laptop 14 inch">
-                                    <img src="assets/images/products/laptop/hero.jpg" alt="Ảnh sản phẩm: Apple MacBook Pro 14 M1 Pro" loading="lazy">
+                                    <img src="assets/images/products/laptop/hero.jpg" alt="Ảnh sản phẩm: Apple MacBook Pro 14 M1 Pro" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -357,7 +360,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=phone" aria-label="Xem chi tiết Điện thoại 6.1 inch">
-                                    <img src="assets/images/products/phone/hero.jpg" alt="Ảnh sản phẩm: Apple iPhone 13 Pro" loading="lazy">
+                                    <img src="assets/images/products/phone/hero.jpg" alt="Ảnh sản phẩm: Apple iPhone 13 Pro" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -401,7 +404,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=headphones" aria-label="Xem chi tiết Tai nghe không dây">
-                                    <img src="assets/images/products/headphones/hero.jpg" alt="Ảnh sản phẩm: Apple AirPods Max" loading="lazy">
+                                    <img src="assets/images/products/headphones/hero.jpg" alt="Ảnh sản phẩm: Apple AirPods Max" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -445,7 +448,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=keyboard" aria-label="Xem chi tiết Bàn phím cơ">
-                                    <img src="assets/images/products/keyboard/hero.jpg" alt="Ảnh sản phẩm: Keychron K8" loading="lazy">
+                                    <img src="assets/images/products/keyboard/hero.jpg" alt="Ảnh sản phẩm: Keychron K8" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -489,7 +492,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=mouse" aria-label="Xem chi tiết Chuột không dây">
-                                    <img src="assets/images/products/mouse/hero.jpg" alt="Ảnh sản phẩm: Logitech MX Master 2S" loading="lazy">
+                                    <img src="assets/images/products/mouse/hero.jpg" alt="Ảnh sản phẩm: Logitech MX Master 2S" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -533,7 +536,7 @@
 
                             <div class="product-image">
                                 <a class="product-photo-link" href="ecommerce-detail.html?id=charger" aria-label="Xem chi tiết Củ sạc USB-C">
-                                    <img src="assets/images/products/charger/hero.jpg" alt="Ảnh sản phẩm: AUKEY Omnia Mini 20W" loading="lazy">
+                                    <img src="assets/images/products/charger/hero.jpg" alt="Ảnh sản phẩm: AUKEY Omnia Mini 20W" loading="lazy" decoding="async">
                                 </a>
                                 <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
@@ -576,6 +579,8 @@
 
         </div>
     </div>
+
+</main>
 
     <!-- Sign in Modal -->
     <div class="modal fade"
@@ -646,7 +651,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <div id="techstoreQuickViewGallery" class="techstore-quickview-gallery">
-                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="">
+                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="" decoding="async">
                                 <div id="techstoreQuickViewThumbnails" class="row techstore-quickview-thumbnails"></div>
                             </div>
                         </div>
@@ -679,9 +684,11 @@
     <!-- Initialize Bootstrap Tooltips -->
     <script src="assets/vendor/xzoom/xzoom.min.js"></script>
     <script src="assets/js/products.js"></script>
+    <script src="assets/js/techstore-cart.js"></script>
     <script src="assets/js/ecommerce.js"></script>
     <script src="assets/js/techstore-quickview.js"></script>
     <script src="assets/js/techstore-navigation.js"></script>
+    <script src="assets/js/techstore-search.js"></script>
 
     <script src="assets/js/techstore-stock.js"></script>
     <script src="assets/js/techstore-labels.js"></script>

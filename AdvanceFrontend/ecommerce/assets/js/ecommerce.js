@@ -23,5 +23,8 @@ $(function () {
     $('[data-toggle="tooltip"]').tooltip();
     $('.add-to-cart a').on('click', function (event) {
         event.preventDefault();
+        var id = $(this).attr('data-id') || $(this).closest('.product-card').attr('data-product-id');
+        var outcome = window.TechStoreCart.add(id, 1);
+        window.TechStoreCart.notify(outcome.message, !outcome.ok);
     });
 });

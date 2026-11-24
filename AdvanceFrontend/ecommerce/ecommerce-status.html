@@ -29,9 +29,11 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/techstore-logo.svg">
     <link rel="stylesheet" href="assets/css/techstore-stock.css">
     <link rel="stylesheet" href="assets/css/techstore-labels.css">
+    <link rel="stylesheet" href="assets/css/techstore-enhancements.css">
 </head>
 
 <body>
+    <a class="techstore-skip-link" href="#mainContent">Bỏ qua điều hướng, đến nội dung chính</a>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default">
@@ -52,15 +54,14 @@
                 </button>
 
                 <a class="navbar-brand" href="ecommerce.html">
-                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="">
+                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="" decoding="async">
                     <span>TechStore</span>
                 </a>
 
                 <!-- Mobile Search -->
                 <div class="visible-xs-block mobile-search-wrap">
                     <form class="visible-xs-inline-block mobile-search"
-                          role="search"
-                          onsubmit="return false;">
+                          role="search">
 
                         <div class="form-group">
                             <input type="search"
@@ -109,8 +110,7 @@
 
                 <!-- Desktop Search -->
                 <form class="navbar-form navbar-left hidden-xs desktop-search"
-                      role="search"
-                      onsubmit="return false;">
+                      role="search">
 
                     <div class="form-group">
                         <input type="search"
@@ -130,11 +130,11 @@
 
                     <li>
                         <a href="#"
-                           aria-label="Giỏ hàng, 4 sản phẩm">
+                           aria-label="Giỏ hàng, 0 sản phẩm">
                             <i class="glyphicon glyphicon-shopping-cart"
                                aria-hidden="true"></i>
 
-                            <span class="badge cart-badge">4</span>
+                            <span class="badge cart-badge">0</span>
                         </a>
                     </li>
 
@@ -186,6 +186,8 @@
         </div>
     </nav>
 
+<main id="mainContent" tabindex="-1">
+    <h1 class="sr-only" id="pageHeading">Theo dõi trạng thái đơn hàng TechStore</h1>
     <!-- Orders Layout -->
     <div class="container orders-layout">
         <div class="row">
@@ -239,7 +241,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=laptop" aria-label="Xem Laptop 14 inch">
-                                    <img src="assets/images/products/laptop/hero.jpg" class="order-photo" alt="Ảnh Laptop 14 inch" loading="lazy">
+                                    <img src="assets/images/products/laptop/hero.jpg" class="order-photo" alt="Ảnh Laptop 14 inch" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -294,7 +296,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=headphones" aria-label="Xem Tai nghe không dây">
-                                    <img src="assets/images/products/headphones/hero.jpg" class="order-photo" alt="Ảnh Tai nghe không dây" loading="lazy">
+                                    <img src="assets/images/products/headphones/hero.jpg" class="order-photo" alt="Ảnh Tai nghe không dây" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -345,7 +347,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=mouse" aria-label="Xem Chuột không dây">
-                                    <img src="assets/images/products/mouse/hero.jpg" class="order-photo" alt="Ảnh Chuột không dây" loading="lazy">
+                                    <img src="assets/images/products/mouse/hero.jpg" class="order-photo" alt="Ảnh Chuột không dây" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -393,7 +395,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=keyboard" aria-label="Xem Bàn phím cơ">
-                                    <img src="assets/images/products/keyboard/hero.jpg" class="order-photo" alt="Ảnh Bàn phím cơ" loading="lazy">
+                                    <img src="assets/images/products/keyboard/hero.jpg" class="order-photo" alt="Ảnh Bàn phím cơ" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -448,7 +450,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=phone" aria-label="Xem Điện thoại 6.1 inch">
-                                    <img src="assets/images/products/phone/hero.jpg" class="order-photo" alt="Ảnh Điện thoại 6.1 inch" loading="lazy">
+                                    <img src="assets/images/products/phone/hero.jpg" class="order-photo" alt="Ảnh Điện thoại 6.1 inch" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -499,7 +501,7 @@
                         <div class="col-sm-1 order-image-column">
                             <div class="order-image">
                                 <a href="ecommerce-detail.html?id=charger" aria-label="Xem Củ sạc USB-C">
-                                    <img src="assets/images/products/charger/hero.jpg" class="order-photo" alt="Ảnh Củ sạc USB-C" loading="lazy">
+                                    <img src="assets/images/products/charger/hero.jpg" class="order-photo" alt="Ảnh Củ sạc USB-C" loading="lazy" decoding="async">
                                 </a>
                             </div>
                         </div>
@@ -550,6 +552,8 @@
             </div>
         </div>
     </div>
+
+</main>
 
     <!-- Sign in Modal -->
     <div class="modal fade"
@@ -755,7 +759,7 @@
                     <div class="row">
                         <div class="col-sm-7">
                             <div id="techstoreQuickViewGallery" class="techstore-quickview-gallery">
-                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="">
+                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="" decoding="async">
                                 <div id="techstoreQuickViewThumbnails" class="row techstore-quickview-thumbnails"></div>
                             </div>
                         </div>
@@ -788,9 +792,11 @@
     <!-- Page Interactions -->
     <script src="assets/vendor/xzoom/xzoom.min.js"></script>
     <script src="assets/js/products.js"></script>
+    <script src="assets/js/techstore-cart.js"></script>
     <script src="assets/js/ecommerce-status.js"></script>
     <script src="assets/js/techstore-quickview.js"></script>
     <script src="assets/js/techstore-navigation.js"></script>
+    <script src="assets/js/techstore-search.js"></script>
 
     <script src="assets/js/techstore-stock.js"></script>
     <script src="assets/js/techstore-labels.js"></script>

@@ -1,0 +1,82 @@
+.techstore-cart-link { cursor: pointer; }
+.techstore-cart-toast {
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    z-index: 1080;
+    max-width: min(380px, calc(100vw - 36px));
+    padding: 12px 16px;
+    color: #fff;
+    background: #256b42;
+    border-radius: 6px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .18);
+    font-size: 14px;
+    line-height: 1.5;
+}
+.techstore-cart-toast.is-error { background: #a94442; }
+.techstore-cart-toast[hidden], .techstore-search-feedback[hidden] { display: none !important; }
+.techstore-search-feedback {
+    margin: -4px 0 18px;
+    padding: 12px 14px;
+    color: #315678;
+    background: #f1f7fc;
+    border: 1px solid #d5e6f5;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.techstore-search-reset { margin-left: 8px; padding: 0 4px; font-weight: 600; }
+.cart-demo-note { margin-bottom: 18px; color: #586777; font-size: 13px; }
+.techstore-cart-items { max-height: 55vh; overflow-y: auto; }
+.techstore-cart-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e7edf2;
+}
+.techstore-cart-photo {
+    flex: 0 0 74px;
+    width: 74px;
+    height: 74px;
+    object-fit: contain;
+    border: 1px solid #edf1f4;
+    border-radius: 5px;
+}
+.techstore-cart-description { flex: 1; min-width: 0; line-height: 1.5; }
+.techstore-cart-name { display: block; font-weight: 600; }
+.techstore-cart-description small { display: block; color: #607080; }
+.techstore-cart-controls { display: flex; align-items: center; gap: 6px; }
+.techstore-cart-quantity { width: 76px; text-align: center; }
+.techstore-cart-remove { color: #b63d3d; }
+.techstore-cart-summary { margin-top: 14px; font-size: 16px; font-weight: 600; text-align: right; }
+.techstore-stock__incart { margin: 2px 0 6px; font-size: 12px; color: #446c8d; }
+.add-to-cart a.is-disabled { opacity: .5; cursor: not-allowed; }
+.product-card .techstore-rating-meta,
+.related-card .techstore-rating-meta { font-size: 12px; color: #586675; white-space: normal; }
+.techstore-rating-block .rating-container.rating-xs .star,
+.related-ratings .rating-container.rating-xs .star { font-size: 17px; }
+.review-item .comment-stars .rating-container.rating-xs .star { font-size: 17px; }
+.review-section #reviewStars .rating-container .star { font-size: 20px; }
+.product-card .caption h4 a { line-height: 1.4; }
+.product-card .add-to-cart a { transition: transform .15s ease, color .15s ease; }
+.product-card .add-to-cart a:hover { transform: scale(1.07); }
+.techstore-cart-link:focus,
+.add-to-cart a:focus,
+.techstore-search-reset:focus,
+.techstore-cart-remove:focus {
+    outline: 2px solid #337ab7;
+    outline-offset: 2px;
+}
+@media (max-width: 767px) {
+    .techstore-cart-toast { left: 12px; right: 12px; bottom: 12px; max-width: none; }
+    .techstore-cart-row { flex-wrap: wrap; }
+    .techstore-cart-photo { flex-basis: 60px; width: 60px; height: 60px; }
+    .techstore-cart-description { flex: 1 1 calc(100% - 80px); }
+    .techstore-cart-controls { margin-left: 72px; }
+    .techstore-cart-summary { font-size: 14px; text-align: left; }
+    .product-card .techstore-rating-meta { font-size: 12px; }
+    .techstore-search-feedback { font-size: 13px; }
+    .techstore-search-reset { margin-left: 0; }
+}
+
+.techstore-product-grid > .techstore-search-hidden { display: none !important; }

@@ -11,6 +11,7 @@ $(function () {
 
     if (selectedProduct) {
         document.title = selectedProduct.seoTitle || (selectedProduct.name + ' | TechStore');
+        $('#pageHeading').text(selectedProduct.name + ' | TechStore');
         $('meta[name="description"]').attr('content', selectedProduct.seoDescription || selectedProduct.description);
         $('.product-info .product-price').text(catalog.formatPrice(selectedProduct.price));
         $('.product-info .clearfix h4 a').text(selectedProduct.name)
@@ -83,33 +84,45 @@ $(function () {
         });
     }
 
-    // Official xZoom controls thumbnail selection and magnification.
+    // Zoom is available only for the representative image; other thumbnails change the preview.
+    var $detailMain = $('#mainProductImage');
+    var $detailThumbs = $('#productThumbnails');
+    var detailHeroSelected = true;
+    $detailMain.attr('data-zoom-policy', 'hero-only-v15.3');
+
     if ($.fn.xzoom && selectedProduct.gallery && selectedProduct.gallery.length) {
-        var detailZoom = $('#mainProductImage, #productThumbnails .xzoom-gallery').xzoom({
+        // Do not register the thumbnail images with xZoom.
+        var detailZoom = $detailMain.xzoom({
             position: 'inside',
             mposition: 'inside',
             scroll: true,
             openOnSmall: true,
             adaptive: true,
-            activeClass: 'xactive',
             title: false,
             fadeTrans: false
         });
 
-        // Keep xZoom responsible for thumbnail selection, but only the first
-        // (representative) image is magnified on mouse hover.
         if (detailZoom && typeof detailZoom.openzoom === 'function') {
-            var heroSelected = true;
-            var $detailMain = $('#mainProductImage');
-            $detailMain.off('mouseenter', detailZoom.openzoom);
-            $('#productThumbnails').on('click.techstoreHeroZoom', 'a', function () {
-                heroSelected = $(this).closest('.col-xs-3').index() === 0;
-                if (!heroSelected) { detailZoom.closezoom(); }
-            });
+            $detailMain.off('mouseenter');
             $detailMain.on('mouseenter.techstoreHeroZoom', function (event) {
-                if (heroSelected) { detailZoom.openzoom(event); }
+                if (detailHeroSelected && this.complete && this.naturalWidth > 0) {
+                    detailZoom.openzoom(event);
+                }
             });
         }
+        $detailThumbs.find('img').removeClass('xactive').first().addClass('xactive');
+        $detailThumbs.on('click.techstoreHeroZoom', 'a', function (event) {
+            event.preventDefault();
+            var index = $detailThumbs.find('a').index(this);
+            var photo = selectedProduct.gallery[index];
+            if (!photo) { return; }
+            detailHeroSelected = index === 0;
+            if (detailZoom && typeof detailZoom.closezoom === 'function') {
+                detailZoom.closezoom();
+            }
+            $detailMain.attr({src: photo.src, xoriginal: photo.src, alt: photo.alt});
+            $detailThumbs.find('img').removeClass('xactive').eq(index).addClass('xactive');
+        });
     } else if (!$.fn.xzoom) {
         console.error('xZoom is unavailable. Check assets/vendor/xzoom/xzoom.min.js');
     }
@@ -127,78 +140,55 @@ $(function () {
         $('#selectedRam').val($(this).data('ram'));
     });
 
-    // Clear quantity validation
-    $('#number').on('input', function () {
+    // Keep stock-limit validation in Vietnamese, including native browser prompts.
+    $('#number').on('input invalid', function () {
+        var max = Number(this.max);
+        var value = Number(this.value);
         this.setCustomValidity('');
+        if (this.validity.rangeOverflow || (this.value !== '' && Number.isFinite(max) && value > max)) {
+            this.setCustomValidity('Chỉ có thể thêm tối đa ' + max + ' sản phẩm nữa.');
+        } else if (this.validity.rangeUnderflow) {
+            this.setCustomValidity('Số lượng tối thiểu là 1.');
+        } else if (this.value !== '' && !Number.isInteger(value)) {
+            this.setCustomValidity('Vui lòng nhập số lượng nguyên.');
+        }
     });
 
-    // Add to Cart
+    // Add the selected product with its actual quantity and variation.
     $('#productOrderForm').on('submit', function (event) {
         event.preventDefault();
-
-        var quantityInput = document.getElementById('number');
-        var quantity = Number(quantityInput.value);
-
-        if (!Number.isInteger(quantity) || quantity < 1) {
-            quantityInput.setCustomValidity(
-                'Vui lòng nhập số nguyên lớn hơn 0.'
-            );
-
+        var $quantity = $('#number');
+        var quantityInput = $quantity[0];
+        var amount = Number($quantity.val());
+        var outcome = window.TechStoreCart.add(selectedProduct.id, amount, {
+            color: $('#color').val(),
+            ram: $('#selectedRam').val()
+        });
+        if (!outcome.ok && (!Number.isInteger(amount) || amount < 1)) {
+            quantityInput.setCustomValidity(outcome.message);
             quantityInput.reportValidity();
             return;
         }
-
         quantityInput.setCustomValidity('');
-
-        var color = $('#color').val();
-        var ram = $('#selectedRam').val();
-
-        var currentCount = Number(
-            $('.cart-badge').first().text()
-        );
-
-        var newCount = currentCount + quantity;
-
-        $('.cart-badge').text(newCount);
-
-        $('.cart-badge').closest('a').attr(
-            'aria-label',
-            'Giỏ hàng, ' + newCount + ' sản phẩm'
-        );
-
         $('#productFeedback')
-            .text(
-                'Đã thêm ' + quantity +
-                ' ' + (selectedProduct ? selectedProduct.name : 'Laptop 14 inch') +
-                (selectedProduct && selectedProduct.id === 'laptop' ? ', màu ' + color + ', RAM ' + ram : '') +
-                ' vào giỏ hàng.'
-            )
+            .toggleClass('alert-success', outcome.ok)
+            .toggleClass('alert-danger', !outcome.ok)
+            .text(outcome.message)
             .prop('hidden', false);
+        if (outcome.ok) { window.TechStoreCart.notify(outcome.message); }
     });
 
-    // Other Products
+    // Add related products through the same cart and stock rules.
     $('[data-toggle="tooltip"]').tooltip();
-
     $('.related-add').on('click', function () {
-        var productName = $(this).attr('data-name');
-
-        var count = Number(
-            $('.cart-badge').first().text()
-        ) + 1;
-
-        $('.cart-badge').text(count);
-
-        $('.cart-badge').closest('a').attr(
-            'aria-label',
-            'Giỏ hàng, ' + count + ' sản phẩm'
-        );
-
+        var id = $(this).attr('data-id');
+        var outcome = window.TechStoreCart.add(id, 1);
         $('#relatedFeedback')
-            .text(
-                'Đã thêm 1 ' + productName +
-                ' vào giỏ hàng.'
-            )
+            .toggleClass('alert-success', outcome.ok)
+            .toggleClass('alert-danger', !outcome.ok)
+            .text(outcome.message)
             .prop('hidden', false);
+        if (outcome.ok) { window.TechStoreCart.notify(outcome.message); }
     });
 
 });

@@ -30,10 +30,6 @@
 .review-section .rating-container .filled-stars {
     color: #f0ad4e;
 }
-.techstore-rating-block .rating-container.rating-xs .star,
-.related-ratings .rating-container.rating-xs .star {
-    font-size: 14px;
-}
 .techstore-rating-line {
     display: flex;
     align-items: center;
@@ -50,7 +46,6 @@
     align-items: center;
     margin-right: 8px;
 }
-.review-item .comment-stars .rating-container.rating-xs .star { font-size: 15px; }
 #reviewForm .rating-container { margin: 2px 0 8px; }
 #reviewRatingError { margin-top: 4px; }
 @media (max-width: 767px) {

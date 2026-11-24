@@ -6,6 +6,14 @@
         if (!catalog) { return; }
 
         var products = catalog.getAll();
+        $('.carousel-indicators li[data-slide-to]')
+            .attr({role: 'button', tabindex: '0'})
+            .on('keydown', function (event) {
+                if (event.which === 13 || event.which === 32) {
+                    event.preventDefault();
+                    $(this).trigger('click');
+                }
+            });
         var currentPage = window.location.pathname.split('/').pop().toLowerCase() || 'ecommerce.html';
         var currentId = new URLSearchParams(window.location.search).get('id');
         var currentProduct = currentPage === 'ecommerce-detail.html' ? catalog.getById(currentId) : null;

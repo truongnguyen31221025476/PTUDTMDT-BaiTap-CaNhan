@@ -33,6 +33,7 @@
             if (!data) { return null; }
 
             var compact = size === 'card';
+            var inCart = window.TechStoreCart ? window.TechStoreCart.getQuantity(product.id) : 0;
             var $container = $('<section>', {
                 'class': 'techstore-stock techstore-stock--' + size,
                 'aria-label': 'Trạng thái tồn kho ' + product.name
@@ -42,6 +43,10 @@
             $header.append($('<span>', {'class': 'techstore-stock__amount'})
                 .text('Còn ' + data.available + '/' + data.reference));
             $container.append($header);
+            if (inCart) {
+                $container.append($('<div class="techstore-stock__incart"></div>')
+                    .text('Đã chọn ' + inCart + ' trong giỏ · có thể thêm ' + Math.max(0, product.stock - inCart)));
+            }
 
             var $progress = $('<div>', {'class': 'progress techstore-stock__progress'});
             var classes = 'progress-bar progress-bar-' + data.type;
@@ -78,31 +83,43 @@
             return $container;
         }
 
-        $('.product-card[data-product-id]').each(function () {
-            var $card = $(this);
-            var product = catalog.getById($card.attr('data-product-id'));
-            if (!product) { return; }
-            $card.find('.techstore-stock').remove();
-            var $stock = buildStock(product, 'card');
-            if ($stock) { $card.find('.product-description').first().after($stock); }
-        });
+        function refreshStock() {
+            $('.product-card[data-product-id]').each(function () {
+                var $card = $(this);
+                var product = catalog.getById($card.attr('data-product-id'));
+                if (!product) { return; }
+                $card.find('.techstore-stock').remove();
+                var $stock = buildStock(product, 'card');
+                if ($stock) { $card.find('.product-description').first().after($stock); }
+                var free = window.TechStoreCart.remaining(product.id);
+                $card.find('.add-to-cart a')
+                    .toggleClass('is-disabled', free < 1)
+                    .attr('aria-disabled', free < 1 ? 'true' : 'false')
+                    .attr('title', free ? 'Thêm vào giỏ hàng' : 'Đã chọn hết hàng còn trong kho');
+            });
 
-        var id = new URLSearchParams(window.location.search).get('id');
-        var selectedProduct = catalog.getById(id);
-        if ($('#productOrderForm').length && selectedProduct) {
-            var $detailStock = buildStock(selectedProduct, 'detail');
-            $('.product-info .techstore-stock').remove();
-            if ($detailStock) { $('.product-info .description').first().after($detailStock); }
-            // HTML5 max validation blocks quantities greater than the available stock.
-            var $quantity = $('#number');
-            if (inventory(selectedProduct)) {
-                $quantity.attr('max', selectedProduct.stock);
-                if (selectedProduct.stock === 0) {
-                    $quantity.prop('disabled', true);
-                    $('#productOrderForm button[type="submit"]').prop('disabled', true);
-                }
+            $('.related-card[data-product-id]').each(function () {
+                var id = $(this).attr('data-product-id');
+                var free = window.TechStoreCart.remaining(id);
+                $(this).find('.related-add').prop('disabled', free < 1).attr('title', free ? 'Thêm vào giỏ hàng' : 'Đã chọn hết hàng');
+            });
+
+            var id = new URLSearchParams(window.location.search).get('id');
+            var selectedProduct = catalog.getById(id);
+            if ($('#productOrderForm').length && selectedProduct) {
+                var $detailStock = buildStock(selectedProduct, 'detail');
+                $('.product-info .techstore-stock').remove();
+                if ($detailStock) { $('.product-info .description').first().after($detailStock); }
+                var free = window.TechStoreCart.remaining(selectedProduct.id);
+                var $quantity = $('#number');
+                $quantity.attr('max', free).prop('disabled', free === 0);
+                if (free && Number($quantity.val()) > free) { $quantity.val(free); }
+                $('#productOrderForm button[type="submit"]').prop('disabled', free === 0);
             }
         }
+
+        refreshStock();
+        $(document).on('techstore:cart-changed', refreshStock);
 
         // Quick View is shared by homepage and order page. This handler uses the
         // product URL already populated by the existing Bootstrap modal script.
