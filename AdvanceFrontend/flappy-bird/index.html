@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#b7354c">
+    <title>Flappy Noël | Christmas Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="game-page">
+        <header class="game-heading">
+            <span class="edition">CHRISTMAS EDITION</span>
+            <h1>Flappy Noël</h1>
+            <p>Vượt ống kẹo Giáng sinh, chinh phục 4 Level và đạt 50 điểm!</p>
+        </header>
+
+        <section class="game-area" aria-label="Trò chơi Flappy Noël">
+            <div id="container" tabindex="0" aria-label="Khung chơi. Nhấn phím mũi tên xuống để bắt đầu hoặc vỗ cánh.">
+                <div id="bird" aria-hidden="true"></div>
+                <div id="pole_1" class="pole" aria-hidden="true"></div>
+                <div id="pole_2" class="pole" aria-hidden="true"></div>
+
+                <div id="level">Level 1</div>
+                <div id="best_badge">Kỷ lục: <span id="best_score">0</span></div>
+                <span id="score" aria-label="Điểm hiện tại">0</span>
+                <div id="level_toast" aria-live="polite" aria-atomic="true"></div>
+
+                <div id="game_overlay" class="game-overlay">
+                    <div class="overlay-card">
+                        <span id="overlay_icon" class="overlay-icon" aria-hidden="true">❄</span>
+                        <h2 id="overlay_title">Sẵn sàng bay!</h2>
+                        <p id="overlay_message">Nhấn <kbd>↓</kbd> để bắt đầu. Nhấn từng lần để vỗ cánh.</p>
+                        <p id="overlay_result" class="overlay-result" hidden></p>
+                        <button id="play_btn" type="button">Bắt đầu với ↓</button>
+                    </div>
+                </div>
+
+                <div id="progress_panel" aria-label="Tiến độ Level">
+                    <div class="progress-copy"><span id="progress_label">Tiến tới Level 2</span><span id="progress_count">0/5</span></div>
+                    <div class="progress-track"><div id="progress_fill"></div></div>
+                </div>
+                <div id="test_badge" hidden>CHẾ ĐỘ KIỂM THỬ</div>
+            </div>
+
+            <div class="game-tools" aria-label="Công cụ trò chơi">
+                <button id="pause_btn" type="button" title="Nhấn P để tạm dừng" disabled>⏸ Tạm dừng (P)</button>
+                <button id="sound_btn" type="button" title="Nhấn M bật/tắt âm thanh">🔇 Âm thanh (M)</button>
+                <button id="help_btn" type="button" aria-expanded="false" aria-controls="help_panel">❔ Hướng dẫn (H)</button>
+            </div>
+
+            <div id="help_panel" class="help-panel" hidden>
+                <strong>Cách chơi</strong>
+                <p><kbd>↓</kbd> Bắt đầu, vỗ cánh hoặc chơi lại. Nhấn từng lần, không cần giữ phím.</p>
+                <p><kbd>P</kbd> Tạm dừng / tiếp tục · <kbd>M</kbd> Bật/tắt âm thanh · <kbd>H</kbd> Hiện/ẩn hướng dẫn.</p>
+                <p>Vượt qua ống kẹo để ghi điểm. Khi đạt 5, 20, 40 điểm sẽ lên Level; đạt 50 điểm để chiến thắng.</p>
+            </div>
+            <p class="game-caption">Mẹo: vỗ cánh đều tay. Va chạm được tính theo phần thân chim, không tính khoảng trong suốt của ảnh.</p>
+            <p id="screen_reader_status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+        </section>
+        <footer class="page-footer">Phát triển từ bài hướng dẫn Flappy Bird HTML, CSS và jQuery của Freetuts.</footer>
+    </main>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
