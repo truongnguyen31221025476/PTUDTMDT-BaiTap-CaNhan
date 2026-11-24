@@ -24,7 +24,7 @@ Học phần Phát triển ứng dụng thương mại điện tử · GVHD TS. 
 | `lms-jquery/` | Trang hướng dẫn và tệp `bai-tap.js` để chạy trên LMS |
 | `flappy-bird/` | Trang trò chơi, CSS, JavaScript và sprite Noël |
 | `evidence/` | Quy ước bộ ảnh nhóm 2 gồm `01_ecommerce`, `02_jquery_lms` và `03_flappy_bird` |
-| `report/` | Thư mục dành cho báo cáo nhóm 2 theo quy định đặt tên |
+| `report/` | [Báo cáo nhóm 2 – TechStore, jQuery trên LMS UEH và Flappy Noël](report/31221025476_NguyenVanTruong_AdvancedFE.docx) · [Báo cáo nhóm 3 – Flexbox Froggy, CSS Grid Garden, CodingFantasy và CodeCombat](report/31221025476_NguyenVanTruong_GameBTCNVN.docx) |
 
 ## Ghi chú thực hành
 
