@@ -1,4 +1,4 @@
-# Chương 6 · Advanced Frontend
+# Chương 6 · Advanced FrontEnd
 
 Nguyễn Văn Trường · MSSV **31221025476** · Lớp học phần **26C1INF50902701**  
 Học phần Phát triển ứng dụng thương mại điện tử · GVHD TS. Nguyễn Mạnh Tuấn
