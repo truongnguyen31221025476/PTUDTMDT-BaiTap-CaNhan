@@ -1,0 +1,251 @@
+/* Carousel */
+.tech-carousel {
+    margin-bottom: 25px;
+}
+
+.tech-carousel .banner-panel {
+    height: 340px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-carousel .banner-laptop {
+    background: linear-gradient(120deg, #112744 0%, #205a9d 100%);
+}
+
+.tech-carousel .banner-phone {
+    background: linear-gradient(120deg, #173d43 0%, #237e83 100%);
+}
+
+.tech-carousel .banner-accessories {
+    background: linear-gradient(120deg, #3a2057 0%, #8754aa 100%);
+}
+
+.tech-carousel .carousel-caption {
+    top: 50%;
+    bottom: auto;
+    left: 10%;
+    right: 42%;
+    transform: translateY(-50%);
+    text-align: left;
+    text-shadow: none;
+    padding: 0;
+}
+
+.tech-carousel .carousel-caption h2 {
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 8px 0 12px;
+}
+
+.tech-carousel .carousel-caption p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.tech-carousel .banner-label {
+    display: inline-block;
+    padding: 5px 12px;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.tech-carousel .carousel-control.left,
+.tech-carousel .carousel-control.right {
+    background-image: none;
+}
+
+/* Categories and Products */
+.catalog-section {
+    margin-bottom: 35px;
+}
+
+.category-title,
+.product-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.category-list .list-group-item {
+    color: #333;
+}
+
+.category-list .list-group-item:hover {
+    background-color: #f5f9fc;
+    color: #337ab7;
+}
+
+.category-list .badge {
+    background-color: #777;
+}
+
+.product-card {
+    position: relative;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.product-image {
+    position: relative;
+    height: 190px;
+    overflow: hidden;
+    background-color: #eaf1f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-symbol {
+    position: relative;
+    z-index: 1;
+    font-size: 76px;
+    line-height: 1;
+}
+
+.add-to-cart {
+    position: absolute;
+    top: 150px;
+    right: 12px;
+    z-index: 2;
+}
+
+.add-to-cart a {
+    display: inline-block;
+    font-size: 30px;
+    color: #337ab7;
+    background-color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.add-to-cart a:hover {
+    color: #23527c;
+}
+
+.product-card .caption {
+    min-height: 195px;
+    padding: 15px;
+}
+
+.product-card .caption h4 {
+    font-size: 16px;
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666;
+    min-height: 40px;
+}
+
+.product-card .ratings {
+    margin-top: 12px;
+    color: #f0ad4e;
+    font-size: 12px;
+}
+
+.product-card .ratings .pull-right {
+    color: #777;
+}
+
+.product-card .ratings::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .tech-carousel .banner-panel {
+        height: 290px;
+    }
+
+    .tech-carousel .carousel-caption {
+        left: 12%;
+        right: 12%;
+    }
+
+    .tech-carousel .carousel-caption h2 {
+        font-size: 25px;
+    }
+
+    .tech-carousel .carousel-caption p {
+        font-size: 14px;
+    }
+
+    .category-title,
+    .product-title {
+        font-size: 20px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .add-to-cart {
+        top: 170px;
+    }
+
+    .product-card .caption {
+        min-height: 0;
+    }
+}
+
+/* Real product photography */
+.product-photo-link { display: block; position: absolute; inset: 0; width: 100%; height: 100%; }
+.product-photo-link img { display: block; width: 100%; height: 100%; object-fit: contain; padding: 8px; background: #f8fafc; }
+.product-card .product-image { background: #f8fafc; }
+
+
+/* Local category banners */
+.tech-carousel .banner-panel {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.tech-carousel .banner-laptop {
+    background-image: linear-gradient(90deg, rgba(10, 24, 40, .74), rgba(10, 24, 40, .05) 90%), url('../images/banners/banner-laptop.jpg');
+}
+.tech-carousel .banner-phone {
+    background-image: linear-gradient(90deg, rgba(10, 24, 40, .82), rgba(10, 24, 40, .08) 90%), url('../images/banners/banner-phone.jpg');
+}
+.tech-carousel .banner-accessories {
+    background-image: linear-gradient(90deg, rgba(10, 24, 40, .80), rgba(10, 24, 40, .08) 90%), url('../images/banners/banner-accessories.jpg');
+}
+.tech-carousel .carousel-caption h2,
+.tech-carousel .carousel-caption p { text-shadow: 0 1px 3px rgba(0,0,0,.40); }
+
+/* Photos use full product boundaries rather than cropped thumbnails. */
+.product-image { background: #fff; }
+.product-image img { object-fit: contain; padding: 10px; }
+
+/* A consistent product image area for all catalog cards */
+.product-card .product-image img,
+.product-card .product-image a img { object-fit: contain; background: #fff; padding: 10px; }

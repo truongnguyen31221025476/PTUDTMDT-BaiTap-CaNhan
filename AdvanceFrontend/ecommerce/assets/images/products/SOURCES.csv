@@ -1,0 +1,19 @@
+﻿group,number,photo_id,page_url,photo_description,asset_type
+laptop,1,1637607698829-de4171988e79,https://unsplash.com/photos/zGQ8SMLrlRs,MacBook Pro 14 M1 Pro,real_photo
+laptop,2,1637607699132-4b02b865754b,https://unsplash.com/photos/SFID5Ir-8FY,MacBook Pro 14 M1 Pro ports macro,real_photo
+laptop,3,1637607699100-819a0a44ecb3,https://unsplash.com/photos/jD1rNRQh650,MacBook Pro 14 M1 Pro Touch ID,real_photo
+laptop,4,1636971819476-aa41dc3db0d0,https://unsplash.com/photos/gcICIdjUzSg,MacBook Pro 14 M1,real_photo
+phone,1,1632582593957-e28f748ba619,https://unsplash.com/photos/qJZqXSBr7_s,iPhone 13 Pro camera,real_photo
+phone,2,1632560354910-3c8dfa27cb5c,https://unsplash.com/photos/jtFP-1k2JFw,iPhone 13 Pro rear macro,real_photo
+phone,3,1632582593898-949a5f8d76df,https://unsplash.com/photos/7nk6Iq3j2p4,iPhone 13 Pro back,real_photo
+phone,4,1632560354926-21886c0e811c,https://unsplash.com/photos/2Q-pPfHZHyo,iPhone 13 Pro on table,real_photo
+headphones,1,1673056922655-f9e3dcb27147,https://unsplash.com/photos/lDnjOJAafmc,AirPods Max,real_photo
+headphones,2,1673105665361-79b1ef1c4b69,https://unsplash.com/photos/2wAapyU5Pjw,AirPods Max,real_photo
+keyboard,1,1626958390898-162d3577f293,https://unsplash.com/photos/50uD7HzOLW8,Keychron K8,real_photo
+keyboard,2,1626958390943-a70309376444,https://unsplash.com/photos/sfKigQv7viY,Keychron K8,real_photo
+keyboard,3,1626958390916-90be78b9bfe6,https://unsplash.com/photos/c7yBhz9XTIs,Keychron K8,real_photo
+mouse,1,1625750319971-ee4b61e68df8,https://unsplash.com/photos/ta7Y61vwnJ8,Logitech MX Master 2S,real_photo
+mouse,2,1625750435936-f97e1748410b,https://unsplash.com/photos/d62p4lEN4R0,Logitech MX Master 2S,real_photo
+mouse,3,1625750188088-f6cd6756349c,https://unsplash.com/photos/wBGV52CGY5w,Logitech MX Master 2S,real_photo
+charger,1,1773147030733-5c9cf351bc3d,https://unsplash.com/photos/4Yl42KkMzM4,AUKEY Omnia Mini 20W,real_photo
+cable,1,1595756630452-736bc8ef3693,https://unsplash.com/photos/RWxeE7wu1T8,Baseus USB-C cable,real_photo

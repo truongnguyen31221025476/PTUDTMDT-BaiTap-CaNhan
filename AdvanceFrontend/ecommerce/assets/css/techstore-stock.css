@@ -1,0 +1,92 @@
+/* TechStore inventory component: Bootstrap 3 progress bars */
+.techstore-stock {
+    margin: 14px 0 18px;
+    max-width: 100%;
+    min-width: 0;
+}
+.techstore-stock__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+    color: #485464;
+    font-size: 13px;
+}
+.techstore-stock__heading {
+    font-weight: 600;
+}
+.techstore-stock__amount {
+    font-weight: 600;
+    white-space: nowrap;
+    color: #263747;
+}
+.techstore-stock__progress {
+    width: 100%;
+    height: 18px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    background: #edf1f5;
+    border-radius: 4px;
+    box-shadow: none;
+}
+.techstore-stock__progress .progress-bar {
+    min-width: 0;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    white-space: nowrap;
+    text-shadow: none;
+    box-shadow: none;
+}
+.techstore-stock__status {
+    color: #66788b;
+    font-size: 12px;
+}
+.techstore-stock__status--danger {
+    color: #b73d38;
+    font-weight: 600;
+}
+.techstore-stock__status--warning {
+    color: #956500;
+    font-weight: 600;
+}
+.product-card .techstore-stock {
+    margin: 10px 0 9px;
+}
+.product-card .techstore-stock__header {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+.product-card .techstore-stock__progress {
+    height: 10px;
+    margin-bottom: 0;
+}
+.product-card .techstore-stock__progress .progress-bar {
+    line-height: 10px;
+}
+.product-info .techstore-stock {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.techstore-quickview-info .techstore-stock {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+    .techstore-stock {
+        width: 100%;
+    }
+    .techstore-stock__header {
+        flex-wrap: wrap;
+        gap: 4px 8px;
+    }
+    .techstore-stock__progress {
+        max-width: 100%;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .techstore-stock .progress-bar.active {
+        animation: none;
+    }
+}

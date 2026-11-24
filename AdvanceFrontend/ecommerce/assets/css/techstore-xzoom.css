@@ -1,0 +1,36 @@
+/* xZoom v1.0.15 integration. Keep the existing Bootstrap 3 layout. */
+.product-gallery .xzoom-container { display: block; width: 100%; }
+.product-gallery .xzoom { display: block; width: 100%; height: 390px; object-fit: contain; box-shadow: none; }
+.product-gallery .xzoom-gallery { border: 0; margin: 0; box-shadow: none; }
+.product-gallery .xzoom-gallery.xactive { border: 0; outline: 2px solid #337ab7; outline-offset: -2px; }
+.product-gallery .thumbnails a { cursor: pointer; }
+.product-gallery .xzoom-source img, .techstore-quickview-modal .xzoom-source img { max-width: none; max-height: none; }
+.techstore-quickview-btn { position: absolute; right: 12px; bottom: 12px; z-index: 2; background: rgba(255,255,255,.96); border-color: #d8e0e7; color: #234363; }
+.product-card .product-image { position: relative; }
+.techstore-quickview-btn:hover, .techstore-quickview-btn:focus { border-color: #337ab7; color: #23527c; }
+.techstore-order-quickview { display: block; padding: 3px 0; text-align: left; white-space: nowrap; }
+.techstore-quickview-modal .modal-dialog { width: calc(100% - 32px); max-width: 900px; margin: 30px auto; }
+.techstore-quickview-gallery > .xzoom { display: block; width: 100%; height: 390px; max-width: 100%; object-fit: contain; border: 1px solid #e0e6ec; border-radius: 4px; box-shadow: none; background: #fff; }
+.techstore-quickview-gallery .xzoom-container { display: block; width: 100%; }
+.techstore-quickview-gallery .xzoom-container .xzoom { display: block; width: 100%; height: 390px; max-width: 100%; object-fit: contain; box-shadow: none; }
+.techstore-quickview-thumbnails { margin-top: 12px; margin-bottom: 0; }
+.techstore-quickview-thumbnails > div { padding-left: 5px; padding-right: 5px; }
+.techstore-quickview-thumbnails a { display: flex; height: 76px; padding: 4px; border: 1px solid #d7e0e7; border-radius: 5px; align-items: center; justify-content: center; background: #fff; }
+.techstore-quickview-thumbnails a:hover, .techstore-quickview-thumbnails a:focus { border-color: #337ab7; }
+.techstore-quickview-thumbnails img.xzoom-gallery { display: block; width: 100%; height: 100%; max-width: 100%; object-fit: contain; border: 0; margin: 0; background: #fff; box-shadow: none; }
+.techstore-quickview-thumbnails img.xactive { outline: 2px solid #337ab7; outline-offset: -2px; }
+.techstore-quickview-info h4 { font-weight: 600; line-height: 1.4; }
+.techstore-quickview-price { color: #d9534f; font-size: 21px; font-weight: bold; }
+.techstore-quickview-info p { line-height: 1.6; }
+.xzoom-loading { background-image: none; }
+@media(max-width:767px) {
+    .product-gallery .xzoom { height: 300px; }
+    .techstore-quickview-modal .modal-dialog { margin: 12px auto; width: calc(100% - 24px); }
+    .techstore-quickview-gallery > .xzoom, .techstore-quickview-gallery .xzoom-container .xzoom { height: 270px; }
+    .techstore-quickview-thumbnails a { height: 62px; }
+    .techstore-quickview-info { margin-top: 16px; }
+}
+
+/* Keep xZoom's preview above content but inside Bootstrap's modal stack. */
+.techstore-quickview-gallery { position: relative; min-width: 0; }
+.techstore-quickview-gallery > .xzoom-source { z-index: 4; }

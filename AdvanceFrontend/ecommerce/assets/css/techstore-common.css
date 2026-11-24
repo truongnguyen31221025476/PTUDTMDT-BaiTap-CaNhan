@@ -1,0 +1,78 @@
+/* Navigation */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #337ab7 !important;
+    letter-spacing: -0.2px;
+}
+
+.techstore-logo {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    object-fit: contain;
+}
+
+.cart-badge {
+    margin-left: 5px;
+    background-color: #d9534f;
+}
+
+.mobile-search-wrap {
+    clear: both;
+    padding: 0 15px 10px;
+}
+
+.mobile-search {
+    width: 100%;
+    margin: 0;
+}
+
+.mobile-search .form-control {
+    width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar-nav > li > a {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .desktop-search .form-control {
+        width: 140px;
+    }
+}
+
+.navbar-brand:focus-visible {
+    outline: 2px solid #337ab7;
+    outline-offset: 2px;
+}
+
+/* Shared site footer */
+.site-footer {
+    margin-top: 36px;
+    padding: 18px 15px;
+    border-top: 1px solid #e8edf3;
+    background: #f8fafc;
+    color: #667085;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.site-footer p { margin: 0; }
+
+/* Selected catalog category is persistent, unlike hover and focus. */
+.category-list .list-group-item.active,
+.category-list .list-group-item.active:hover,
+.category-list .list-group-item.active:focus {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    font-weight: 600;
+}
+.category-list .list-group-item.active .badge {
+    background-color: #fff;
+    color: #286090;
+}

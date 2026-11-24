@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>TechStore | Thiết bị công nghệ và phụ kiện</title>
+    <meta name="description" content="Khám phá laptop, điện thoại và phụ kiện công nghệ tại TechStore với hình ảnh sản phẩm rõ nét và thông tin dễ tham khảo.">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet"
@@ -26,302 +26,17 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-        /* Navigation */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            color: #337ab7 !important;
-        }
-
-        .techstore-logo {
-            width: 26px;
-            height: 26px;
-        }
-
-        .cart-badge {
-            margin-left: 5px;
-            background-color: #d9534f;
-        }
-
-        .mobile-search-wrap {
-            clear: both;
-            padding: 0 15px 10px;
-        }
-
-        .mobile-search {
-            width: 100%;
-            margin: 0;
-        }
-
-        .mobile-search .form-control {
-            width: 100%;
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .navbar-nav > li > a {
-                padding-left: 9px;
-                padding-right: 9px;
-            }
-
-            .desktop-search .form-control {
-                width: 140px;
-            }
-        }
-
-        /* Carousel */
-        .tech-carousel {
-            margin-bottom: 25px;
-        }
-
-        .tech-carousel .banner-panel {
-            height: 340px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tech-carousel .banner-laptop {
-            background: linear-gradient(120deg, #112744 0%, #205a9d 100%);
-        }
-
-        .tech-carousel .banner-phone {
-            background: linear-gradient(120deg, #173d43 0%, #237e83 100%);
-        }
-
-        .tech-carousel .banner-accessories {
-            background: linear-gradient(120deg, #3a2057 0%, #8754aa 100%);
-        }
-
-        .tech-carousel .banner-visual {
-            position: absolute;
-            top: 50%;
-            right: 11%;
-            width: 240px;
-            height: 240px;
-            margin-top: -120px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.09);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.92);
-            font-size: 112px;
-        }
-
-        .tech-carousel .carousel-caption {
-            top: 50%;
-            bottom: auto;
-            left: 10%;
-            right: 42%;
-            transform: translateY(-50%);
-            text-align: left;
-            text-shadow: none;
-            padding: 0;
-        }
-
-        .tech-carousel .carousel-caption h2 {
-            font-size: 34px;
-            font-weight: bold;
-            line-height: 1.25;
-            margin: 8px 0 12px;
-        }
-
-        .tech-carousel .carousel-caption p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        .tech-carousel .banner-label {
-            display: inline-block;
-            padding: 5px 12px;
-            background: rgba(255, 255, 255, 0.16);
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .tech-carousel .carousel-control.left,
-        .tech-carousel .carousel-control.right {
-            background-image: none;
-        }
-
-        /* Categories and Products */
-        .catalog-section {
-            margin-bottom: 35px;
-        }
-
-        .category-title,
-        .product-title {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .category-list .list-group-item {
-            color: #333;
-        }
-
-        .category-list .list-group-item:hover {
-            background-color: #f5f9fc;
-            color: #337ab7;
-        }
-
-        .category-list .badge {
-            background-color: #777;
-        }
-
-        .catalog-note {
-            color: #777;
-            font-size: 12px;
-            margin-bottom: 15px;
-        }
-
-        .product-card {
-            position: relative;
-            margin-bottom: 25px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #fff;
-            overflow: hidden;
-        }
-
-        .product-image {
-            position: relative;
-            height: 190px;
-            overflow: hidden;
-            background-color: #eaf1f8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .product-image img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-symbol {
-            position: relative;
-            z-index: 1;
-            font-size: 76px;
-            line-height: 1;
-        }
-
-        .add-to-cart {
-            position: absolute;
-            top: 150px;
-            right: 12px;
-            z-index: 2;
-        }
-
-        .add-to-cart a {
-            display: inline-block;
-            font-size: 30px;
-            color: #337ab7;
-            background-color: #fff;
-            border-radius: 50%;
-            text-decoration: none;
-        }
-
-        .add-to-cart a:hover {
-            color: #23527c;
-        }
-
-        .product-card .caption {
-            min-height: 195px;
-            padding: 15px;
-        }
-
-        .product-card .caption h4 {
-            font-size: 16px;
-            margin-top: 0;
-            line-height: 1.4;
-        }
-
-        .product-price {
-            font-size: 16px;
-            color: #d9534f;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .product-description {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #666;
-            min-height: 40px;
-        }
-
-        .product-card .ratings {
-            margin-top: 12px;
-            color: #f0ad4e;
-            font-size: 12px;
-        }
-
-        .product-card .ratings .pull-right {
-            color: #777;
-        }
-
-        .product-card .ratings::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        /* Responsive */
-        @media (max-width: 767px) {
-            .tech-carousel .banner-panel {
-                height: 290px;
-            }
-
-            .tech-carousel .banner-visual {
-                right: -35px;
-                width: 190px;
-                height: 190px;
-                margin-top: -95px;
-                font-size: 95px;
-                opacity: 0.25;
-            }
-
-            .tech-carousel .carousel-caption {
-                left: 12%;
-                right: 12%;
-            }
-
-            .tech-carousel .carousel-caption h2 {
-                font-size: 25px;
-            }
-
-            .tech-carousel .carousel-caption p {
-                font-size: 14px;
-            }
-
-            .category-title,
-            .product-title {
-                font-size: 20px;
-            }
-
-            .product-image {
-                height: 210px;
-            }
-
-            .add-to-cart {
-                top: 170px;
-            }
-
-            .product-card .caption {
-                min-height: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/techstore-common.css">
+    <link rel="stylesheet" href="assets/vendor/xzoom/xzoom.css">
+    <link rel="stylesheet" href="assets/css/ecommerce.css">
+    <link rel="stylesheet" href="assets/css/techstore-xzoom.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/techstore-logo.svg">
+    <link rel="stylesheet" href="assets/css/techstore-stock.css">
+    <link rel="stylesheet" href="assets/css/techstore-labels.css">
+    <link rel="stylesheet" href="assets/css/techstore-grid.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/css/star-rating.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/themes/krajee-svg/theme.min.css">
+    <link rel="stylesheet" href="assets/css/techstore-rating.css">
 </head>
 
 <body>
@@ -345,20 +60,7 @@
                 </button>
 
                 <a class="navbar-brand" href="#">
-                    <svg class="techstore-logo"
-                         viewBox="0 0 32 32"
-                         aria-hidden="true">
-                        <rect x="1" y="1"
-                              width="30" height="30"
-                              rx="6" fill="#337ab7"/>
-                        <rect x="10" y="5"
-                              width="12" height="22"
-                              rx="2" fill="none"
-                              stroke="#ffffff"
-                              stroke-width="2"/>
-                        <circle cx="16" cy="23"
-                                r="1.3" fill="#ffffff"/>
-                    </svg>
+                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="">
                     <span>TechStore</span>
                 </a>
 
@@ -381,14 +83,14 @@
 
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#">
+                        <a href="ecommerce.html" aria-current="page">
                             Trang chủ
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
 
-                    <li><a href="#">Laptop</a></li>
-                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="ecommerce-detail.html?id=laptop">Laptop</a></li>
+                    <li><a href="ecommerce-detail.html?id=phone">Điện thoại</a></li>
 
                     <li class="dropdown">
                         <a href="#"
@@ -401,12 +103,12 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tai nghe</a></li>
-                            <li><a href="#">Bàn phím</a></li>
-                            <li><a href="#">Chuột</a></li>
+                            <li><a href="ecommerce-detail.html?id=headphones">Tai nghe</a></li>
+                            <li><a href="ecommerce-detail.html?id=keyboard">Bàn phím</a></li>
+                            <li><a href="ecommerce-detail.html?id=mouse">Chuột</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Cáp sạc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
+                            <li><a href="ecommerce-detail.html?id=charger">Củ sạc USB-C</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -503,9 +205,6 @@
                     <div class="banner-panel banner-laptop"
                          role="img"
                          aria-label="Banner giới thiệu laptop">
-                        <div class="banner-visual" aria-hidden="true">
-                            <i class="glyphicon glyphicon-blackboard"></i>
-                        </div>
                     </div>
                     <div class="carousel-caption">
                         <span class="banner-label">TechStore</span>
@@ -518,9 +217,6 @@
                     <div class="banner-panel banner-phone"
                          role="img"
                          aria-label="Banner giới thiệu điện thoại">
-                        <div class="banner-visual" aria-hidden="true">
-                            <i class="glyphicon glyphicon-phone"></i>
-                        </div>
                     </div>
                     <div class="carousel-caption">
                         <span class="banner-label">Thiết bị di động</span>
@@ -533,9 +229,6 @@
                     <div class="banner-panel banner-accessories"
                          role="img"
                          aria-label="Banner giới thiệu phụ kiện công nghệ">
-                        <div class="banner-visual" aria-hidden="true">
-                            <i class="glyphicon glyphicon-headphones"></i>
-                        </div>
                     </div>
                     <div class="carousel-caption">
                         <span class="banner-label">Phụ kiện công nghệ</span>
@@ -569,7 +262,7 @@
     </div>
 
     <!-- 2.1.4 Display Categories and Products -->
-    <div class="container catalog-section">
+    <div class="container catalog-section" id="productCatalog">
         <div class="row">
 
             <!-- Categories -->
@@ -577,34 +270,34 @@
                 <h3 class="category-title">Danh mục sản phẩm</h3>
 
                 <div class="list-group category-list">
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=laptop" class="list-group-item">
                         <span class="badge">1</span>
                         Laptop
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=phone" class="list-group-item">
                         <span class="badge">1</span>
                         Điện thoại
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=headphones" class="list-group-item">
                         <span class="badge">1</span>
                         Tai nghe
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=keyboard" class="list-group-item">
                         <span class="badge">1</span>
                         Bàn phím
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=mouse" class="list-group-item">
                         <span class="badge">1</span>
                         Chuột
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=charger" class="list-group-item">
                         <span class="badge">1</span>
-                        Sạc và cáp
+                        Củ sạc USB-C
                     </a>
                 </div>
             </div>
@@ -612,20 +305,17 @@
             <!-- Product Grid -->
             <div class="col-sm-8 col-md-9">
                 <h3 class="product-title">Sản phẩm nổi bật</h3>
-                <p class="catalog-note">
-                    Giá và thông tin sản phẩm dùng để minh họa giao diện.
-                </p>
-
-                <div class="row">
+                <div class="row techstore-product-grid">
 
                     <!-- Product 1 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="laptop">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa laptop"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">💻</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=laptop" aria-label="Xem chi tiết Laptop 14 inch">
+                                    <img src="assets/images/products/laptop/hero.jpg" alt="Ảnh sản phẩm: Apple MacBook Pro 14 M1 Pro" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -639,7 +329,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=laptop">
                                         Laptop 14 inch
                                     </a>
                                 </h4>
@@ -653,17 +343,9 @@
                                     làm việc văn phòng và giải trí.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">
-                                        Chưa có đánh giá
-                                    </p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -671,12 +353,13 @@
 
                     <!-- Product 2 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="phone">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa điện thoại"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">📱</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=phone" aria-label="Xem chi tiết Điện thoại 6.1 inch">
+                                    <img src="assets/images/products/phone/hero.jpg" alt="Ảnh sản phẩm: Apple iPhone 13 Pro" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -690,7 +373,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=phone">
                                         Điện thoại 6.1 inch
                                     </a>
                                 </h4>
@@ -704,15 +387,9 @@
                                     làm việc và giải trí hằng ngày.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">Chưa có đánh giá</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -720,12 +397,13 @@
 
                     <!-- Product 3 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="headphones">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa tai nghe"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">🎧</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=headphones" aria-label="Xem chi tiết Tai nghe không dây">
+                                    <img src="assets/images/products/headphones/hero.jpg" alt="Ảnh sản phẩm: Apple AirPods Max" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -739,7 +417,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=headphones">
                                         Tai nghe không dây
                                     </a>
                                 </h4>
@@ -753,15 +431,9 @@
                                     cho nghe nhạc và học trực tuyến.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">Chưa có đánh giá</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -769,12 +441,13 @@
 
                     <!-- Product 4 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="keyboard">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa bàn phím"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">⌨️</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=keyboard" aria-label="Xem chi tiết Bàn phím cơ">
+                                    <img src="assets/images/products/keyboard/hero.jpg" alt="Ảnh sản phẩm: Keychron K8" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -788,7 +461,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=keyboard">
                                         Bàn phím cơ
                                     </a>
                                 </h4>
@@ -802,15 +475,9 @@
                                     nhập liệu và giải trí trên máy tính.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">Chưa có đánh giá</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -818,12 +485,13 @@
 
                     <!-- Product 5 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="mouse">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa chuột"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">🖱️</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=mouse" aria-label="Xem chi tiết Chuột không dây">
+                                    <img src="assets/images/products/mouse/hero.jpg" alt="Ảnh sản phẩm: Logitech MX Master 2S" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -837,7 +505,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=mouse">
                                         Chuột không dây
                                     </a>
                                 </h4>
@@ -851,15 +519,9 @@
                                     với máy tính để bàn và laptop.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">Chưa có đánh giá</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -867,12 +529,13 @@
 
                     <!-- Product 6 -->
                     <div class="col-sm-6 col-md-4">
-                        <div class="thumbnail product-card">
+                        <div class="thumbnail product-card" data-product-id="charger">
 
                             <div class="product-image">
-                                <img alt="Hình nền minh họa củ sạc"
-                                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='750' height='600'%3E%3Crect width='750' height='600' fill='%23eaf1f8'/%3E%3C/svg%3E">
-                                <span class="product-symbol" aria-hidden="true">🔌</span>
+                                <a class="product-photo-link" href="ecommerce-detail.html?id=charger" aria-label="Xem chi tiết Củ sạc USB-C">
+                                    <img src="assets/images/products/charger/hero.jpg" alt="Ảnh sản phẩm: AUKEY Omnia Mini 20W" loading="lazy">
+                                </a>
+                                <button type="button" class="btn btn-default btn-xs techstore-quickview-btn" title="Xem nhanh hình ảnh" aria-label="Xem nhanh hình ảnh sản phẩm"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem nhanh</button>
                             </div>
 
                             <div class="add-to-cart">
@@ -886,7 +549,7 @@
 
                             <div class="caption">
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=charger">
                                         Củ sạc USB-C
                                     </a>
                                 </h4>
@@ -900,15 +563,9 @@
                                     thuận tiện cho các thiết bị tương thích.
                                 </p>
 
-                                <div class="ratings">
-                                    <p class="pull-right">Chưa có đánh giá</p>
-                                    <p>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                        <span class="glyphicon glyphicon-star-empty"></span>
-                                    </p>
+                                <div class="ratings techstore-rating-block">
+                                    <input type="text" class="techstore-rating-readonly" aria-label="Điểm đánh giá sản phẩm" value="0">
+                                    <span class="techstore-rating-meta">Chưa có đánh giá</span>
                                 </div>
                             </div>
                         </div>
@@ -962,10 +619,6 @@
                         </div>
                     </form>
 
-                    <p class="text-muted">
-                        Giao diện minh họa, chưa kết nối
-                        hệ thống đăng nhập.
-                    </p>
                 </div>
 
                 <div class="modal-footer">
@@ -980,6 +633,41 @@
         </div>
     </div>
 
+    
+    <!-- Gallery xem nhanh sử dụng thư viện xZoom -->
+    <div class="modal fade techstore-quickview-modal" id="techstoreQuickView" tabindex="-1" role="dialog" aria-labelledby="techstoreQuickViewTitle">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="techstoreQuickViewTitle">Xem nhanh sản phẩm</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div id="techstoreQuickViewGallery" class="techstore-quickview-gallery">
+                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="">
+                                <div id="techstoreQuickViewThumbnails" class="row techstore-quickview-thumbnails"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 techstore-quickview-info">
+                            <h4 id="techstoreQuickViewName"></h4>
+                            <p class="techstore-quickview-price" id="techstoreQuickViewPrice"></p>
+                            <p id="techstoreQuickViewDescription"></p>
+                            <a class="btn btn-primary" id="techstoreQuickViewDetail" href="ecommerce.html">Xem chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Website TechStore được xây dựng trong khuôn khổ bài tập thực hành của sinh viên.</p>
+        </div>
+    </footer>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -989,15 +677,16 @@
             crossorigin="anonymous"></script>
 
     <!-- Initialize Bootstrap Tooltips -->
-    <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip();
+    <script src="assets/vendor/xzoom/xzoom.min.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/ecommerce.js"></script>
+    <script src="assets/js/techstore-quickview.js"></script>
+    <script src="assets/js/techstore-navigation.js"></script>
 
-            $('.add-to-cart a').on('click', function (event) {
-                event.preventDefault();
-            });
-        });
-    </script>
-
+    <script src="assets/js/techstore-stock.js"></script>
+    <script src="assets/js/techstore-labels.js"></script>
+    <script src="assets/vendor/bootstrap-star-rating/js/star-rating.min.js"></script>
+    <script src="assets/vendor/bootstrap-star-rating/themes/krajee-svg/theme.min.js"></script>
+    <script src="assets/js/techstore-rating.js"></script>
 </body>
 </html>

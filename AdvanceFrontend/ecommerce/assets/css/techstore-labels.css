@@ -1,0 +1,58 @@
+/* Bootstrap 3 Labels positioned on the product photography. */
+.product-card .product-image,
+.related-card .related-picture,
+.product-detail .product-gallery,
+.techstore-quickview-gallery {
+    position: relative;
+}
+
+.techstore-product-flags {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+    pointer-events: none;
+}
+
+.techstore-promo-label.label {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    max-width: calc(50% - 12px);
+    border-radius: 3px;
+    padding: 7px 9px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: .1px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .13);
+}
+
+.techstore-promo-label--left { left: 10px; }
+.techstore-promo-label--right { right: 10px; }
+
+.techstore-promo-label--left.label-danger { background-color: #e64a50; }
+.techstore-promo-label--right.label-success { background-color: #36a26e; }
+.techstore-promo-label--right.label-warning { background-color: #ef9c2d; }
+
+.techstore-original-price {
+    display: block;
+    margin-top: 4px;
+    color: #929ba5;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.product-info .product-price .techstore-original-price { text-align: right; }
+.techstore-quickview-price .techstore-original-price { font-size: 14px; }
+
+/* Keep decorative labels separate from xZoom and interactive controls. */
+.techstore-quickview-gallery > .techstore-product-flags { z-index: 4; }
+.product-gallery > .techstore-product-flags { z-index: 4; }
+
+@media (max-width: 767px) {
+    .techstore-promo-label.label { top: 8px; padding: 6px 8px; font-size: 11px; }
+    .techstore-promo-label--left { left: 8px; }
+    .techstore-promo-label--right { right: 8px; }
+}

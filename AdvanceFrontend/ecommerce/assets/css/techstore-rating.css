@@ -1,0 +1,58 @@
+/* Kartik Star Rating: TechStore layout only. The plugin and its SVG theme are vendor files. */
+.product-card .techstore-rating-block,
+.related-card .related-ratings {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 3px;
+}
+.product-card .techstore-rating-meta,
+.related-card .techstore-rating-meta {
+    color: #777;
+    font-size: 11px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+/* The original Bootstrap-3 .pull-right layout is replaced by a flex row. */
+.product-card .ratings .rating-container,
+.related-card .related-ratings .rating-container,
+.review-section #reviewStars .rating-container,
+.review-item .comment-stars .rating-container {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin: 0;
+}
+.product-card .rating-container .filled-stars,
+.related-card .rating-container .filled-stars,
+.review-section .rating-container .filled-stars {
+    color: #f0ad4e;
+}
+.techstore-rating-block .rating-container.rating-xs .star,
+.related-ratings .rating-container.rating-xs .star {
+    font-size: 14px;
+}
+.techstore-rating-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+#averageRating,
+#reviewCount {
+    color: #666;
+}
+.review-item .comment-stars {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    margin-right: 8px;
+}
+.review-item .comment-stars .rating-container.rating-xs .star { font-size: 15px; }
+#reviewForm .rating-container { margin: 2px 0 8px; }
+#reviewRatingError { margin-top: 4px; }
+@media (max-width: 767px) {
+    .product-card .techstore-rating-block { gap: 5px; }
+}

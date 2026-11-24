@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TechStore">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#12365b"/>
+      <stop offset="1" stop-color="#0b1c36"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#background)"/>
+  <path d="M15 21H49" fill="none" stroke="#eefaff" stroke-width="6.5" stroke-linecap="round"/>
+  <path d="M32 21V45" fill="none" stroke="#36c0eb" stroke-width="6.5" stroke-linecap="round"/>
+  <circle cx="49" cy="21" r="3.3" fill="#72e6fd"/>
+  <circle cx="32" cy="45" r="3.3" fill="#eefaff"/>
+  <path d="M17 46h7" fill="none" stroke="#2a9deb" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

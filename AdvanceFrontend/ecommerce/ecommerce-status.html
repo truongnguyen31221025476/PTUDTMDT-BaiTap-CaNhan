@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -23,260 +22,13 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-        /* Navigation */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            color: #337ab7 !important;
-        }
-
-        .techstore-logo {
-            width: 26px;
-            height: 26px;
-        }
-
-        .cart-badge {
-            margin-left: 5px;
-            background-color: #d9534f;
-        }
-
-        .mobile-search-wrap {
-            clear: both;
-            padding: 0 15px 10px;
-        }
-
-        .mobile-search {
-            width: 100%;
-            margin: 0;
-        }
-
-        .mobile-search .form-control {
-            width: 100%;
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .navbar-nav > li > a {
-                padding-left: 9px;
-                padding-right: 9px;
-            }
-
-            .desktop-search .form-control {
-                width: 140px;
-            }
-        }
-
-        /* Page Layout */
-        .orders-layout {
-            margin-top: 25px;
-            margin-bottom: 45px;
-        }
-
-        .sidebar-title,
-        .orders-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        .orders-description {
-            color: #777;
-            font-size: 13px;
-            margin-bottom: 20px;
-        }
-
-        /* Sidebar */
-        .order-menu .list-group-item {
-            color: #333;
-            padding: 13px 15px;
-        }
-
-        .order-menu .list-group-item:hover {
-            background-color: #f5f9fc;
-            color: #337ab7;
-        }
-
-        .order-menu .list-group-item.active {
-            background: #337ab7;
-            color: #fff;
-            border-color: #337ab7;
-        }
-
-        .order-menu button.list-group-item {
-            width: 100%;
-            text-align: left;
-        }
-
-        /* Order List */
-        .order-item {
-            padding: 13px 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-
-        .order-item > .row {
-            display: flex;
-            align-items: center;
-        }
-
-        .order-item .row > div {
-            min-width: 0;
-        }
-
-        .order-image {
-            width: 100%;
-            max-width: 52px;
-            aspect-ratio: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #eaf1f8;
-            border: 1px solid #e0e6ec;
-            border-radius: 3px;
-            font-size: 23px;
-        }
-
-        .order-product a {
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        .order-quantity,
-        .order-price {
-            font-size: 14px;
-            color: #555;
-        }
-
-        .order-status {
-            display: inline-block;
-            white-space: nowrap;
-        }
-
-        .order-status-column,
-        .order-message-column {
-            font-size: 13px;
-        }
-
-        .order-message-column a {
-            white-space: nowrap;
-        }
-
-        .mobile-label {
-            display: none;
-        }
-
-        /* Tablet */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .order-item > .row {
-                flex-wrap: wrap;
-            }
-
-            .order-item .order-image-column {
-                width: 15%;
-            }
-
-            .order-item .order-product-column {
-                width: 45%;
-            }
-
-            .order-item .order-quantity-column {
-                width: 12%;
-            }
-
-            .order-item .order-price-column {
-                width: 28%;
-            }
-
-            .order-item .order-status-column,
-            .order-item .order-message-column {
-                width: 50%;
-                margin-top: 10px;
-            }
-
-            .order-item .order-message-column {
-                text-align: right;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 767px) {
-            .sidebar-title,
-            .orders-title {
-                font-size: 20px;
-            }
-
-            .order-menu {
-                margin-bottom: 30px;
-            }
-
-            .order-item {
-                padding: 15px;
-            }
-
-            .order-item > .row {
-                display: grid;
-                grid-template-columns: 60px minmax(0, 1fr);
-                gap: 7px 12px;
-                margin: 0;
-            }
-
-            .order-item .row > div {
-                float: none;
-                width: auto;
-                padding: 0;
-            }
-
-            .order-image-column {
-                grid-column: 1;
-                grid-row: 1 / span 3;
-            }
-
-            .order-product-column {
-                grid-column: 2;
-                grid-row: 1;
-            }
-
-            .order-quantity-column {
-                grid-column: 2;
-                grid-row: 2;
-            }
-
-            .order-price-column {
-                grid-column: 2;
-                grid-row: 3;
-            }
-
-            .order-status-column {
-                grid-column: 1 / span 2;
-                grid-row: 4;
-                margin-top: 10px;
-                padding-top: 10px !important;
-                border-top: 1px solid #eee;
-            }
-
-            .order-message-column {
-                grid-column: 1 / span 2;
-                grid-row: 5;
-                padding-top: 4px !important;
-            }
-
-            .order-image {
-                max-width: 60px;
-                font-size: 30px;
-            }
-
-            .mobile-label {
-                display: inline;
-                color: #777;
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/techstore-common.css">
+    <link rel="stylesheet" href="assets/vendor/xzoom/xzoom.css">
+    <link rel="stylesheet" href="assets/css/ecommerce-status.css">
+    <link rel="stylesheet" href="assets/css/techstore-xzoom.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/techstore-logo.svg">
+    <link rel="stylesheet" href="assets/css/techstore-stock.css">
+    <link rel="stylesheet" href="assets/css/techstore-labels.css">
 </head>
 
 <body>
@@ -300,20 +52,7 @@
                 </button>
 
                 <a class="navbar-brand" href="ecommerce.html">
-                    <svg class="techstore-logo"
-                         viewBox="0 0 32 32"
-                         aria-hidden="true">
-                        <rect x="1" y="1"
-                              width="30" height="30"
-                              rx="6" fill="#337ab7"/>
-                        <rect x="10" y="5"
-                              width="12" height="22"
-                              rx="2" fill="none"
-                              stroke="#ffffff"
-                              stroke-width="2"/>
-                        <circle cx="16" cy="23"
-                                r="1.3" fill="#ffffff"/>
-                    </svg>
+                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="">
                     <span>TechStore</span>
                 </a>
 
@@ -342,8 +81,8 @@
                         <a href="ecommerce.html">Trang chủ</a>
                     </li>
 
-                    <li><a href="#">Laptop</a></li>
-                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="ecommerce-detail.html?id=laptop">Laptop</a></li>
+                    <li><a href="ecommerce-detail.html?id=phone">Điện thoại</a></li>
 
                     <li class="dropdown">
                         <a href="#"
@@ -358,12 +97,12 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tai nghe</a></li>
-                            <li><a href="#">Bàn phím</a></li>
-                            <li><a href="#">Chuột</a></li>
+                            <li><a href="ecommerce-detail.html?id=headphones">Tai nghe</a></li>
+                            <li><a href="ecommerce-detail.html?id=keyboard">Bàn phím</a></li>
+                            <li><a href="ecommerce-detail.html?id=mouse">Chuột</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Cáp sạc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
+                            <li><a href="ecommerce-detail.html?id=charger">Củ sạc USB-C</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -466,9 +205,9 @@
                         Tất cả đơn hàng
                     </a>
 
-                    <a href="ecommerce-detail.html#reviewEntries"
+                    <a href="ecommerce.html#productCatalog"
                        class="list-group-item">
-                        Quản lý đánh giá
+                        Đánh giá sản phẩm
                     </a>
 
                     <button type="button"
@@ -493,27 +232,24 @@
                     Trạng thái đơn hàng
                 </h3>
 
-                <p class="orders-description">
-                    Danh sách đơn hàng minh họa của TechStore.
-                </p>
-
                 <!-- Order 1 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="laptop">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Laptop">
-                                💻
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=laptop" aria-label="Xem Laptop 14 inch">
+                                    <img src="assets/images/products/laptop/hero.jpg" class="order-photo" alt="Ảnh Laptop 14 inch" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce-detail.html">
+                                <a href="ecommerce-detail.html?id=laptop">
                                     Laptop 14 inch
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -552,22 +288,23 @@
                 </div>
 
                 <!-- Order 2 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="headphones">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Tai nghe">
-                                🎧
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=headphones" aria-label="Xem Tai nghe không dây">
+                                    <img src="assets/images/products/headphones/hero.jpg" class="order-photo" alt="Ảnh Tai nghe không dây" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce.html">
+                                <a href="ecommerce-detail.html?id=headphones">
                                     Tai nghe không dây
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -602,22 +339,23 @@
                 </div>
 
                 <!-- Order 3 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="mouse">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Chuột">
-                                🖱️
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=mouse" aria-label="Xem Chuột không dây">
+                                    <img src="assets/images/products/mouse/hero.jpg" class="order-photo" alt="Ảnh Chuột không dây" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce.html">
+                                <a href="ecommerce-detail.html?id=mouse">
                                     Chuột không dây
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -649,22 +387,23 @@
                 </div>
 
                 <!-- Order 4 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="keyboard">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Bàn phím">
-                                ⌨️
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=keyboard" aria-label="Xem Bàn phím cơ">
+                                    <img src="assets/images/products/keyboard/hero.jpg" class="order-photo" alt="Ảnh Bàn phím cơ" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce.html">
+                                <a href="ecommerce-detail.html?id=keyboard">
                                     Bàn phím cơ
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -703,22 +442,23 @@
                 </div>
 
                 <!-- Order 5 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="phone">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Điện thoại">
-                                📱
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=phone" aria-label="Xem Điện thoại 6.1 inch">
+                                    <img src="assets/images/products/phone/hero.jpg" class="order-photo" alt="Ảnh Điện thoại 6.1 inch" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce.html">
+                                <a href="ecommerce-detail.html?id=phone">
                                     Điện thoại 6.1 inch
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -753,22 +493,23 @@
                 </div>
 
                 <!-- Order 6 -->
-                <div class="thumbnail order-item">
+                <div class="thumbnail order-item" data-product-id="charger">
                     <div class="row">
 
                         <div class="col-sm-1 order-image-column">
-                            <div class="order-image"
-                                 role="img"
-                                 aria-label="Củ sạc">
-                                🔌
+                            <div class="order-image">
+                                <a href="ecommerce-detail.html?id=charger" aria-label="Xem Củ sạc USB-C">
+                                    <img src="assets/images/products/charger/hero.jpg" class="order-photo" alt="Ảnh Củ sạc USB-C" loading="lazy">
+                                </a>
                             </div>
                         </div>
 
                         <div class="col-sm-4 order-product-column">
                             <div class="order-product">
-                                <a href="ecommerce.html">
+                                <a href="ecommerce-detail.html?id=charger">
                                     Củ sạc USB-C
                                 </a>
+                                    <button type="button" class="btn btn-link btn-xs techstore-order-quickview" aria-label="Xem nhanh hình ảnh"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Xem ảnh</button>
                             </div>
                         </div>
 
@@ -854,10 +595,6 @@
                         </div>
                     </form>
 
-                    <p class="text-muted">
-                        Giao diện minh họa, chưa kết nối
-                        hệ thống đăng nhập.
-                    </p>
                 </div>
 
                 <div class="modal-footer">
@@ -903,14 +640,10 @@
 
                     <p>
                         <span class="label label-info">
-                            Đang xử lý (mẫu)
+                            Đang xử lý
                         </span>
                     </p>
 
-                    <p class="text-muted">
-                        Chức năng theo dõi đang được
-                        mô phỏng, chưa kết nối vận chuyển.
-                    </p>
                 </div>
 
                 <div class="modal-footer">
@@ -956,10 +689,6 @@
 
                     <p id="messageCount"></p>
 
-                    <p class="text-muted">
-                        Nội dung tin nhắn chưa được
-                        kết nối với hệ thống.
-                    </p>
                 </div>
 
                 <div class="modal-footer">
@@ -998,10 +727,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>
-                        Chức năng này chưa được kết nối
-                        với dữ liệu tài khoản.
-                    </p>
+                    <p>Chưa có thông tin tài khoản.</p>
                 </div>
 
                 <div class="modal-footer">
@@ -1016,6 +742,41 @@
         </div>
     </div>
 
+    
+    <!-- Gallery xem nhanh sử dụng thư viện xZoom -->
+    <div class="modal fade techstore-quickview-modal" id="techstoreQuickView" tabindex="-1" role="dialog" aria-labelledby="techstoreQuickViewTitle">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Đóng"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="techstoreQuickViewTitle">Xem nhanh sản phẩm</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <div id="techstoreQuickViewGallery" class="techstore-quickview-gallery">
+                                <img id="techstoreQuickViewMain" class="xzoom" src="" xoriginal="" alt="">
+                                <div id="techstoreQuickViewThumbnails" class="row techstore-quickview-thumbnails"></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 techstore-quickview-info">
+                            <h4 id="techstoreQuickViewName"></h4>
+                            <p class="techstore-quickview-price" id="techstoreQuickViewPrice"></p>
+                            <p id="techstoreQuickViewDescription"></p>
+                            <a class="btn btn-primary" id="techstoreQuickViewDetail" href="ecommerce.html">Xem chi tiết sản phẩm</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Website TechStore được xây dựng trong khuôn khổ bài tập thực hành của sinh viên.</p>
+        </div>
+    </footer>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -1025,40 +786,13 @@
             crossorigin="anonymous"></script>
 
     <!-- Page Interactions -->
-    <script>
-        $(function () {
+    <script src="assets/vendor/xzoom/xzoom.min.js"></script>
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/ecommerce-status.js"></script>
+    <script src="assets/js/techstore-quickview.js"></script>
+    <script src="assets/js/techstore-navigation.js"></script>
 
-            // Tracking information
-            $('.track-order').on('click', function () {
-                var product = $(this).attr('data-product');
-                $('#trackingProduct').text(product);
-            });
-
-            // Messages
-            $('.message-order').on('click', function (event) {
-                event.preventDefault();
-
-                var product = $(this).attr('data-product');
-                var count = $(this).attr('data-count');
-
-                $('#messageProduct').text(product);
-                $('#messageCount').text(
-                    count + ' tin nhắn minh họa.'
-                );
-
-                $('#messageModal').modal('show');
-            });
-
-            // Sidebar items
-            $('.sidebar-demo').on('click', function () {
-                var title = $(this).attr('data-title');
-
-                $('#sidebarModalLabel').text(title);
-                $('#sidebarModal').modal('show');
-            });
-
-        });
-    </script>
-
+    <script src="assets/js/techstore-stock.js"></script>
+    <script src="assets/js/techstore-labels.js"></script>
 </body>
 </html>

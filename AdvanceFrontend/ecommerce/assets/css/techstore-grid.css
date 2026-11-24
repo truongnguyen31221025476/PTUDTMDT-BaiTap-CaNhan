@@ -1,0 +1,54 @@
+/* TechStore homepage product grid: keeps Bootstrap 3 responsive columns.
+   Flex layout prevents shorter float columns from pulling later cards upward. */
+.catalog-section .techstore-product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.catalog-section .techstore-product-grid > .col-sm-6 {
+    display: flex;
+    min-width: 0;
+    width: 100%;
+}
+
+/* Keep each card the full height of its own Bootstrap row. */
+.catalog-section .techstore-product-grid .product-card {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+}
+
+.catalog-section .techstore-product-grid .product-image {
+    flex-shrink: 0;
+}
+
+.catalog-section .techstore-product-grid .product-card .caption {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Reserve free vertical space above inventory and keep ratings aligned. */
+.catalog-section .techstore-product-grid .product-card .techstore-stock {
+    margin-top: auto;
+}
+
+.catalog-section .techstore-product-grid .product-card .ratings {
+    margin-top: 12px;
+}
+
+@media (min-width: 768px) {
+    .catalog-section .techstore-product-grid > .col-sm-6 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .catalog-section .techstore-product-grid > .col-sm-6 {
+        width: 33.33333333%;
+    }
+}

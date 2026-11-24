@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Chi tiết sản phẩm | TechStore</title>
+    <meta name="description" content="Khám phá hình ảnh, thông số, đánh giá và lựa chọn sản phẩm công nghệ tại TechStore.">
 
     <link rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -23,428 +23,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-        /* Navigation */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: bold;
-            color: #337ab7 !important;
-        }
-
-        .techstore-logo {
-            width: 26px;
-            height: 26px;
-        }
-
-        .cart-badge {
-            margin-left: 5px;
-            background-color: #d9534f;
-        }
-
-        .mobile-search-wrap {
-            clear: both;
-            padding: 0 15px 10px;
-        }
-
-        .mobile-search {
-            width: 100%;
-            margin: 0;
-        }
-
-        .mobile-search .form-control {
-            width: 100%;
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .navbar-nav > li > a {
-                padding-left: 9px;
-                padding-right: 9px;
-            }
-
-            .desktop-search .form-control {
-                width: 140px;
-            }
-        }
-
-        /* Categories */
-        .catalog-section {
-            margin-top: 25px;
-            margin-bottom: 35px;
-        }
-
-        .category-title {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .category-list .list-group-item {
-            color: #333;
-        }
-
-        .category-list .list-group-item:hover {
-            background-color: #f5f9fc;
-            color: #337ab7;
-        }
-
-        .category-list .badge {
-            background-color: #777;
-        }
-
-        /* Product Detail */
-        .product-detail {
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-
-        /* Product Gallery */
-        .product-main-image {
-            display: block;
-            width: 100%;
-            aspect-ratio: 5 / 4;
-            object-fit: contain;
-            background-color: #f1f5f9;
-            border: 1px solid #e0e6ec;
-            border-radius: 4px;
-        }
-
-        .thumbnails {
-            margin-top: 12px;
-            margin-bottom: 10px;
-        }
-
-        .thumbnails a {
-            display: block;
-            border: 2px solid transparent;
-            border-radius: 4px;
-        }
-
-        .thumbnails a.active,
-        .thumbnails a:hover,
-        .thumbnails a:focus {
-            border-color: #337ab7;
-        }
-
-        .thumbnails img {
-            width: 100%;
-            height: 65px;
-            object-fit: cover;
-        }
-
-        .gallery-note {
-            font-size: 12px;
-            color: #777;
-            margin-top: 5px;
-        }
-
-        /* Product Information */
-        .product-info .product-price {
-            color: #d9534f;
-            font-weight: bold;
-            margin-left: 12px;
-            white-space: nowrap;
-        }
-
-        .product-info h4 {
-            line-height: 1.4;
-        }
-
-        .product-info h3 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        .product-info p {
-            font-size: 14px;
-            line-height: 1.7;
-            color: #555;
-        }
-
-        .product-info .text-muted {
-            font-size: 13px;
-        }
-
-        /* Product Form */
-        .product-form {
-            border-top: 1px solid #eee;
-            padding-top: 20px;
-            margin-top: 20px;
-        }
-
-        .product-form label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .product-form #number {
-            width: 100px;
-        }
-
-        .product-form #color {
-            max-width: 240px;
-        }
-
-        .ram-options .btn.active {
-            background: #337ab7;
-            color: #fff;
-            border-color: #2e6da4;
-            box-shadow: none;
-        }
-
-        .product-actions .btn {
-            margin: 0 8px 8px 0;
-        }
-
-        #productFeedback {
-            margin-top: 12px;
-        }
-
-        /* Reviewer */
-        .review-section {
-            margin-top: 20px;
-        }
-
-        .review-section .ratings {
-            color: #f0ad4e;
-            font-size: 15px;
-        }
-
-        .review-section .ratings .pull-right {
-            color: #777;
-            font-size: 14px;
-        }
-
-        .review-section .ratings::after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-
-        .review-section .well {
-            margin-top: 12px;
-        }
-
-        /* Comments */
-        .review-item p {
-            margin: 10px 0 0;
-        }
-
-        .review-item .comment-stars {
-            color: #f0ad4e;
-            margin-right: 8px;
-        }
-
-        .review-item .comment-time {
-            color: #777;
-            font-size: 12px;
-        }
-
-        .review-item .comment-origin {
-            color: #777;
-            font-size: 13px;
-        }
-
-        /* Other Products */
-        .related-products {
-            margin-top: 28px;
-        }
-
-        .related-products h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        .related-intro {
-            color: #777;
-            margin-bottom: 18px;
-        }
-
-        .related-toolbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .related-navigation .btn {
-            margin-left: 5px;
-        }
-
-        .related-carousel .item > .row {
-            margin-left: -10px;
-            margin-right: -10px;
-        }
-
-        .related-carousel .item > .row > div {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .related-carousel .carousel-inner {
-            padding: 3px 0 7px;
-        }
-
-        .related-card {
-            position: relative;
-            margin-bottom: 22px;
-            padding: 4px;
-            overflow: hidden;
-        }
-
-        .related-picture {
-            height: 175px;
-            background: #eaf1f8;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .related-picture span {
-            font-size: 72px;
-        }
-
-        .related-add {
-            position: absolute;
-            top: 148px;
-            right: 13px;
-            border: none;
-            padding: 0;
-            background: transparent;
-            color: #337ab7;
-            font-size: 28px;
-        }
-
-        .related-add:hover,
-        .related-add:focus {
-            color: #23527c;
-        }
-
-        .related-card .caption {
-            min-height: 185px;
-        }
-
-        .related-card h4 {
-            margin: 5px 0 10px;
-            font-size: 15px;
-            line-height: 1.4;
-        }
-
-        .related-price {
-            color: #d9534f;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .related-description {
-            color: #555;
-            font-size: 13px;
-            line-height: 1.5;
-            min-height: 60px;
-        }
-
-        .related-ratings {
-            color: #f0ad4e;
-            font-size: 12px;
-        }
-
-        .related-ratings small {
-            display: block;
-            color: #777;
-            margin-top: 5px;
-        }
-
-        #relatedFeedback {
-            margin-bottom: 16px;
-        }
-
-        .related-carousel .carousel-indicators {
-            position: static;
-            left: auto;
-            width: auto;
-            margin: 5px auto 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .related-carousel .carousel-indicators li {
-            width: 10px;
-            height: 10px;
-            margin: 0 4px;
-            border: 1px solid #777;
-            background: #fff;
-        }
-
-        .related-carousel .carousel-indicators li.active {
-            background: #337ab7;
-            border-color: #337ab7;
-        }
-
-        /* Responsive */
-        @media (max-width: 767px) {
-            .category-title {
-                font-size: 20px;
-            }
-
-            .product-detail {
-                padding: 15px;
-            }
-
-            .thumbnails img {
-                height: 55px;
-            }
-
-            .product-info {
-                margin-top: 20px;
-            }
-
-            .product-info h3 {
-                font-size: 20px;
-            }
-
-            .product-info .product-price {
-                float: none !important;
-                display: block;
-                margin-left: 0;
-            }
-
-            .product-actions .btn {
-                width: 100%;
-            }
-
-            .review-item .comment-time {
-                float: none !important;
-                display: block;
-                text-align: right;
-                margin-bottom: 8px;
-            }
-
-            .related-picture {
-                height: 190px;
-            }
-
-            .related-add {
-                top: 163px;
-            }
-
-            .related-card .caption {
-                min-height: 0;
-            }
-
-            .related-description {
-                min-height: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/techstore-common.css">
+    <link rel="stylesheet" href="assets/vendor/xzoom/xzoom.css">
+    <link rel="stylesheet" href="assets/css/ecommerce-detail.css">
+    <link rel="stylesheet" href="assets/css/techstore-xzoom.css">
+    <link rel="icon" type="image/svg+xml" href="assets/images/techstore-logo.svg">
+    <link rel="stylesheet" href="assets/css/techstore-stock.css">
+    <link rel="stylesheet" href="assets/css/techstore-labels.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/css/star-rating.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-star-rating/themes/krajee-svg/theme.min.css">
+    <link rel="stylesheet" href="assets/css/techstore-rating.css">
 </head>
 
 <body>
@@ -468,20 +56,7 @@
                 </button>
 
                 <a class="navbar-brand" href="ecommerce.html">
-                    <svg class="techstore-logo"
-                         viewBox="0 0 32 32"
-                         aria-hidden="true">
-                        <rect x="1" y="1"
-                              width="30" height="30"
-                              rx="6" fill="#337ab7"/>
-                        <rect x="10" y="5"
-                              width="12" height="22"
-                              rx="2" fill="none"
-                              stroke="#ffffff"
-                              stroke-width="2"/>
-                        <circle cx="16" cy="23"
-                                r="1.3" fill="#ffffff"/>
-                    </svg>
+                    <img class="techstore-logo" src="assets/images/techstore-logo.svg" alt="">
                     <span>TechStore</span>
                 </a>
 
@@ -505,8 +80,8 @@
 
                 <ul class="nav navbar-nav">
                     <li><a href="ecommerce.html">Trang chủ</a></li>
-                    <li><a href="#">Laptop</a></li>
-                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="ecommerce-detail.html?id=laptop">Laptop</a></li>
+                    <li><a href="ecommerce-detail.html?id=phone">Điện thoại</a></li>
 
                     <li class="dropdown">
                         <a href="#"
@@ -520,12 +95,12 @@
                         </a>
 
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tai nghe</a></li>
-                            <li><a href="#">Bàn phím</a></li>
-                            <li><a href="#">Chuột</a></li>
+                            <li><a href="ecommerce-detail.html?id=headphones">Tai nghe</a></li>
+                            <li><a href="ecommerce-detail.html?id=keyboard">Bàn phím</a></li>
+                            <li><a href="ecommerce-detail.html?id=mouse">Chuột</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Cáp sạc</a></li>
-                            <li><a href="#">Ốp lưng</a></li>
+                            <li><a href="ecommerce-detail.html?id=charger">Củ sạc USB-C</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -617,34 +192,34 @@
                 </h3>
 
                 <div class="list-group category-list">
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=laptop" class="list-group-item">
                         <span class="badge">1</span>
                         Laptop
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=phone" class="list-group-item">
                         <span class="badge">1</span>
                         Điện thoại
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=headphones" class="list-group-item">
                         <span class="badge">1</span>
                         Tai nghe
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=keyboard" class="list-group-item">
                         <span class="badge">1</span>
                         Bàn phím
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=mouse" class="list-group-item">
                         <span class="badge">1</span>
                         Chuột
                     </a>
 
-                    <a href="#" class="list-group-item">
+                    <a href="ecommerce-detail.html?id=charger" class="list-group-item">
                         <span class="badge">1</span>
-                        Sạc và cáp
+                        Củ sạc USB-C
                     </a>
                 </div>
             </div>
@@ -656,69 +231,39 @@
                     <div class="row">
 
                         <!-- Product Gallery -->
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 product-gallery">
 
                             <img id="mainProductImage"
-                                 class="img-responsive product-main-image"
-                                 src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                                 alt="Ảnh minh họa laptop đang mở">
+                                 class="img-responsive product-main-image xzoom"
+                                 xoriginal="assets/images/products/laptop/hero.jpg"
+                                 src="assets/images/products/laptop/hero.jpg"
+                                 alt="Ảnh MacBook Pro 14 inch">
 
                             <div class="thumbnails row"
                                  id="productThumbnails">
-
                                 <div class="col-xs-3">
-                                    <a href="#"
-                                       class="active"
-                                       data-full="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                                       data-alt="Góc nhìn tổng thể laptop"
-                                       aria-label="Xem ảnh laptop 1">
-
-                                        <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&amp;fit=crop&amp;w=160&amp;q=70"
-                                             alt="Ảnh nhỏ 1"
-                                             class="img-thumbnail img-responsive">
+                                    <a href="assets/images/products/laptop/hero.jpg" data-full="assets/images/products/laptop/hero.jpg" data-alt="Ảnh MacBook Pro 14 số 1" class="active">
+                                        <img src="assets/images/products/laptop/hero.jpg" class="img-thumbnail img-responsive" alt="Ảnh nhỏ 1" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="assets/images/products/laptop/02.jpg" data-full="assets/images/products/laptop/02.jpg" data-alt="Ảnh MacBook Pro 14 số 2">
+                                        <img src="assets/images/products/laptop/02.jpg" class="img-thumbnail img-responsive" alt="Ảnh nhỏ 2" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="assets/images/products/laptop/03.jpg" data-full="assets/images/products/laptop/03.jpg" data-alt="Ảnh MacBook Pro 14 số 3">
+                                        <img src="assets/images/products/laptop/03.jpg" class="img-thumbnail img-responsive" alt="Ảnh nhỏ 3" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="col-xs-3">
+                                    <a href="assets/images/products/laptop/04.jpg" data-full="assets/images/products/laptop/04.jpg" data-alt="Ảnh MacBook Pro 14 số 4">
+                                        <img src="assets/images/products/laptop/04.jpg" class="img-thumbnail img-responsive" alt="Ảnh nhỏ 4" loading="lazy">
                                     </a>
                                 </div>
 
-                                <div class="col-xs-3">
-                                    <a href="#"
-                                       data-full="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                                       data-alt="Laptop trên bàn làm việc"
-                                       aria-label="Xem ảnh laptop 2">
-
-                                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&amp;fit=crop&amp;w=160&amp;q=70"
-                                             alt="Ảnh nhỏ 2"
-                                             class="img-thumbnail img-responsive">
-                                    </a>
-                                </div>
-
-                                <div class="col-xs-3">
-                                    <a href="#"
-                                       data-full="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                                       data-alt="Laptop đang mở"
-                                       aria-label="Xem ảnh laptop 3">
-
-                                        <img src="https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&amp;fit=crop&amp;w=160&amp;q=70"
-                                             alt="Ảnh nhỏ 3"
-                                             class="img-thumbnail img-responsive">
-                                    </a>
-                                </div>
-
-                                <div class="col-xs-3">
-                                    <a href="#"
-                                       data-full="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                                       data-alt="Góc nhìn khác của laptop"
-                                       aria-label="Xem ảnh laptop 4">
-
-                                        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&amp;fit=crop&amp;w=160&amp;q=70"
-                                             alt="Ảnh nhỏ 4"
-                                             class="img-thumbnail img-responsive">
-                                    </a>
-                                </div>
                             </div>
 
-                            <p class="gallery-note">
-                                Ảnh minh họa cho bài thực hành.
-                            </p>
                         </div>
 
                         <!-- Product Information -->
@@ -731,7 +276,7 @@
                                 </h4>
 
                                 <h4>
-                                    <a href="ecommerce-detail.html">
+                                    <a href="ecommerce-detail.html?id=laptop">
                                         Laptop 14 inch
                                     </a>
                                 </h4>
@@ -773,8 +318,7 @@
                                             name="color"
                                             class="form-control">
                                         <option value="Bạc">Bạc</option>
-                                        <option value="Xám">Xám</option>
-                                        <option value="Đen">Đen</option>
+                                        <option value="Xám không gian">Xám không gian</option>
                                     </select>
                                 </div>
 
@@ -787,15 +331,8 @@
 
                                         <button type="button"
                                                 class="btn btn-default active"
-                                                data-ram="8GB"
-                                                aria-pressed="true">
-                                            8GB
-                                        </button>
-
-                                        <button type="button"
-                                                class="btn btn-default"
                                                 data-ram="16GB"
-                                                aria-pressed="false">
+                                                aria-pressed="true">
                                             16GB
                                         </button>
 
@@ -810,7 +347,7 @@
                                     <input type="hidden"
                                            id="selectedRam"
                                            name="ram"
-                                           value="8GB">
+                                           value="16GB">
                                 </div>
 
                                 <div class="form-group product-actions">
@@ -842,18 +379,13 @@
 
                     <div class="ratings">
                         <p class="pull-right" id="reviewCount">
-                            3 đánh giá mẫu
+                            3 đánh giá
                         </p>
 
-                        <p id="reviewStars"
-                           aria-label="Đánh giá trung bình 4 trên 5 sao">
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star"></span>
-                            <span class="glyphicon glyphicon-star-empty"></span>
+                        <div id="reviewStars" class="techstore-rating-line" aria-label="Điểm đánh giá trung bình">
+                            <input type="text" class="techstore-rating-readonly" value="4" aria-label="Điểm đánh giá trung bình">
                             <span id="averageRating">4.0 sao</span>
-                        </p>
+                        </div>
                     </div>
 
                     <div class="well">
@@ -877,19 +409,12 @@
                                     <div class="col-md-12">
 
                                         <span class="pull-right comment-time">
-                                            1 ngày trước (mẫu)
+                                            1 ngày trước
                                         </span>
 
-                                        <span class="comment-stars"
-                                              aria-label="5 trên 5 sao">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </span>
+                                        <span class="comment-stars" aria-label="5 trên 5 sao"><input type="text" class="techstore-rating-readonly" value="5" aria-label="5 trên 5 sao"></span>
 
-                                        <strong>Minh Anh (mẫu)</strong>
+                                        <strong>Khách hàng 01</strong>
 
                                         <p class="comment-origin">
                                             Từ <em>Việt Nam</em>
@@ -911,19 +436,12 @@
                                     <div class="col-md-12">
 
                                         <span class="pull-right comment-time">
-                                            2 ngày trước (mẫu)
+                                            2 ngày trước
                                         </span>
 
-                                        <span class="comment-stars"
-                                              aria-label="4 trên 5 sao">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star-empty"></span>
-                                        </span>
+                                        <span class="comment-stars" aria-label="4 trên 5 sao"><input type="text" class="techstore-rating-readonly" value="4" aria-label="4 trên 5 sao"></span>
 
-                                        <strong>Quang Huy (mẫu)</strong>
+                                        <strong>Khách hàng 02</strong>
 
                                         <p class="comment-origin">
                                             Từ <em>Việt Nam</em>
@@ -945,19 +463,12 @@
                                     <div class="col-md-12">
 
                                         <span class="pull-right comment-time">
-                                            3 ngày trước (mẫu)
+                                            3 ngày trước
                                         </span>
 
-                                        <span class="comment-stars"
-                                              aria-label="3 trên 5 sao">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star-empty"></span>
-                                            <span class="glyphicon glyphicon-star-empty"></span>
-                                        </span>
+                                        <span class="comment-stars" aria-label="3 trên 5 sao"><input type="text" class="techstore-rating-readonly" value="3" aria-label="3 trên 5 sao"></span>
 
-                                        <strong>Thảo Vy (mẫu)</strong>
+                                        <strong>Khách hàng 03</strong>
 
                                         <p class="comment-origin">
                                             Từ <em>Việt Nam</em>
@@ -1033,10 +544,8 @@
                                     <!-- Headphones -->
                                     <div class="col-sm-4">
                                         <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Tai nghe không dây">
-                                                <span aria-hidden="true">🎧</span>
+                                            <div class="related-picture">
+                                                <img src="assets/images/products/headphones/hero.jpg" alt="Ảnh sản phẩm: Apple AirPods Max" loading="lazy">
                                             </div>
 
                                             <button type="button"
@@ -1051,7 +560,7 @@
 
                                             <div class="caption">
                                                 <h4>
-                                                    <a href="ecommerce.html">
+                                                    <a href="ecommerce-detail.html?id=headphones">
                                                         Tai nghe không dây
                                                     </a>
                                                 </h4>
@@ -1065,14 +574,9 @@
                                                     cho học trực tuyến và giải trí.
                                                 </p>
 
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
+                                                <div class="related-ratings" aria-label="Chưa có đánh giá">
+                                                    <input type="text" class="techstore-rating-readonly" value="0" aria-label="Điểm đánh giá sản phẩm liên quan">
+                                                    <small class="techstore-rating-meta">Chưa có đánh giá</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -1081,10 +585,8 @@
                                     <!-- Mouse -->
                                     <div class="col-sm-4">
                                         <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Chuột không dây">
-                                                <span aria-hidden="true">🖱️</span>
+                                            <div class="related-picture">
+                                                <img src="assets/images/products/mouse/hero.jpg" alt="Ảnh sản phẩm: Logitech MX Master 2S" loading="lazy">
                                             </div>
 
                                             <button type="button"
@@ -1099,7 +601,7 @@
 
                                             <div class="caption">
                                                 <h4>
-                                                    <a href="ecommerce.html">
+                                                    <a href="ecommerce-detail.html?id=mouse">
                                                         Chuột không dây
                                                     </a>
                                                 </h4>
@@ -1113,14 +615,9 @@
                                                     cùng laptop và máy tính.
                                                 </p>
 
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
+                                                <div class="related-ratings" aria-label="Chưa có đánh giá">
+                                                    <input type="text" class="techstore-rating-readonly" value="0" aria-label="Điểm đánh giá sản phẩm liên quan">
+                                                    <small class="techstore-rating-meta">Chưa có đánh giá</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -1129,10 +626,8 @@
                                     <!-- Keyboard -->
                                     <div class="col-sm-4">
                                         <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Bàn phím cơ">
-                                                <span aria-hidden="true">⌨️</span>
+                                            <div class="related-picture">
+                                                <img src="assets/images/products/keyboard/hero.jpg" alt="Ảnh sản phẩm: Keychron K8" loading="lazy">
                                             </div>
 
                                             <button type="button"
@@ -1147,7 +642,7 @@
 
                                             <div class="caption">
                                                 <h4>
-                                                    <a href="ecommerce.html">
+                                                    <a href="ecommerce-detail.html?id=keyboard">
                                                         Bàn phím cơ
                                                     </a>
                                                 </h4>
@@ -1161,14 +656,9 @@
                                                     làm việc và giải trí.
                                                 </p>
 
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
+                                                <div class="related-ratings" aria-label="Chưa có đánh giá">
+                                                    <input type="text" class="techstore-rating-readonly" value="0" aria-label="Điểm đánh giá sản phẩm liên quan">
+                                                    <small class="techstore-rating-meta">Chưa có đánh giá</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -1185,10 +675,8 @@
                                     <!-- Phone -->
                                     <div class="col-sm-4">
                                         <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Điện thoại 6.1 inch">
-                                                <span aria-hidden="true">📱</span>
+                                            <div class="related-picture">
+                                                <img src="assets/images/products/phone/hero.jpg" alt="Ảnh sản phẩm: Apple iPhone 13 Pro" loading="lazy">
                                             </div>
 
                                             <button type="button"
@@ -1203,7 +691,7 @@
 
                                             <div class="caption">
                                                 <h4>
-                                                    <a href="ecommerce.html">
+                                                    <a href="ecommerce-detail.html?id=phone">
                                                         Điện thoại 6.1 inch
                                                     </a>
                                                 </h4>
@@ -1217,14 +705,9 @@
                                                     học tập và công việc.
                                                 </p>
 
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
+                                                <div class="related-ratings" aria-label="Chưa có đánh giá">
+                                                    <input type="text" class="techstore-rating-readonly" value="0" aria-label="Điểm đánh giá sản phẩm liên quan">
+                                                    <small class="techstore-rating-meta">Chưa có đánh giá</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -1233,10 +716,8 @@
                                     <!-- Charger -->
                                     <div class="col-sm-4">
                                         <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Củ sạc USB-C">
-                                                <span aria-hidden="true">🔌</span>
+                                            <div class="related-picture">
+                                                <img src="assets/images/products/charger/hero.jpg" alt="Ảnh sản phẩm: AUKEY Omnia Mini 20W" loading="lazy">
                                             </div>
 
                                             <button type="button"
@@ -1251,7 +732,7 @@
 
                                             <div class="caption">
                                                 <h4>
-                                                    <a href="ecommerce.html">
+                                                    <a href="ecommerce-detail.html?id=charger">
                                                         Củ sạc USB-C
                                                     </a>
                                                 </h4>
@@ -1265,66 +746,15 @@
                                                     hỗ trợ cổng USB-C.
                                                 </p>
 
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
+                                                <div class="related-ratings" aria-label="Chưa có đánh giá">
+                                                    <input type="text" class="techstore-rating-readonly" value="0" aria-label="Điểm đánh giá sản phẩm liên quan">
+                                                    <small class="techstore-rating-meta">Chưa có đánh giá</small>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Cable -->
-                                    <div class="col-sm-4">
-                                        <div class="thumbnail related-card">
-                                            <div class="related-picture"
-                                                 role="img"
-                                                 aria-label="Cáp sạc USB-C">
-                                                <span aria-hidden="true">🔋</span>
-                                            </div>
-
-                                            <button type="button"
-                                                    class="related-add"
-                                                    data-name="Cáp sạc USB-C"
-                                                    data-toggle="tooltip"
-                                                    title="Thêm vào giỏ hàng"
-                                                    aria-label="Thêm cáp sạc vào giỏ hàng">
-                                                <span class="glyphicon glyphicon-plus-sign"
-                                                      aria-hidden="true"></span>
-                                            </button>
-
-                                            <div class="caption">
-                                                <h4>
-                                                    <a href="ecommerce.html">
-                                                        Cáp sạc USB-C
-                                                    </a>
-                                                </h4>
-
-                                                <div class="related-price">
-                                                    190.000đ
-                                                </div>
-
-                                                <p class="related-description">
-                                                    Cáp kết nối và sạc
-                                                    cho thiết bị tương thích.
-                                                </p>
-
-                                                <div class="related-ratings"
-                                                     aria-label="Chưa có đánh giá">
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <span class="glyphicon glyphicon-star-empty"></span>
-                                                    <small>Chưa có đánh giá</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
 
                                 </div>
                             </div>
@@ -1346,11 +776,6 @@
                         </ol>
                     </div>
 
-                    <p class="text-muted">
-                        Giá chỉ dùng để minh họa.
-                        Tên sản phẩm liên kết về trang danh mục
-                        vì chưa có trang chi tiết riêng.
-                    </p>
                 </section>
 
             </div>
@@ -1399,10 +824,6 @@
                         </div>
                     </form>
 
-                    <p class="text-muted">
-                        Giao diện minh họa, chưa kết nối
-                        hệ thống đăng nhập.
-                    </p>
                 </div>
 
                 <div class="modal-footer">
@@ -1441,14 +862,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>
-                        Đây là cửa sổ minh họa chức năng
-                        liên hệ người bán.
-                    </p>
-
-                    <p class="text-muted">
-                        Chưa có hệ thống gửi tin nhắn.
-                    </p>
+                    <p>Thông tin liên hệ hiện chưa có.</p>
                 </div>
 
                 <div class="modal-footer">
@@ -1504,15 +918,8 @@
                         <div class="form-group">
                             <label for="reviewRating">Số sao</label>
 
-                            <select id="reviewRating"
-                                    class="form-control"
-                                    required>
-                                <option value="5">5 sao</option>
-                                <option value="4">4 sao</option>
-                                <option value="3">3 sao</option>
-                                <option value="2">2 sao</option>
-                                <option value="1">1 sao</option>
-                            </select>
+                            <input type="text" id="reviewRating" name="reviewRating" value="0" aria-label="Chọn số sao đánh giá" autocomplete="off">
+                                <p id="reviewRatingError" class="text-danger" role="alert" hidden>Vui lòng chọn từ 1 đến 5 sao.</p>
                         </div>
 
                         <div class="form-group">
@@ -1525,10 +932,6 @@
                                       required></textarea>
                         </div>
 
-                        <p class="text-muted">
-                            Đánh giá chỉ hiển thị tạm thời
-                            trên trang này.
-                        </p>
                     </div>
 
                     <div class="modal-footer">
@@ -1549,6 +952,12 @@
         </div>
     </div>
 
+    <footer class="site-footer">
+        <div class="container">
+            <p>Website TechStore được xây dựng trong khuôn khổ bài tập thực hành của sinh viên.</p>
+        </div>
+    </footer>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
@@ -1558,189 +967,15 @@
             crossorigin="anonymous"></script>
 
     <!-- Product Interactions -->
-    <script>
-        $(function () {
+    <script src="assets/js/products.js"></script>
+    <script src="assets/vendor/xzoom/xzoom.min.js"></script>
+    <script src="assets/js/ecommerce-detail.js"></script>
+    <script src="assets/js/techstore-navigation.js"></script>
 
-            // Change main product image
-            $('#productThumbnails a').on('click', function (event) {
-                event.preventDefault();
-
-                var selected = $(this);
-
-                $('#mainProductImage')
-                    .attr('src', selected.attr('data-full'))
-                    .attr('alt', selected.attr('data-alt'));
-
-                $('#productThumbnails a').removeClass('active');
-                selected.addClass('active');
-            });
-
-            // Select RAM
-            $('.ram-options button').on('click', function () {
-                $('.ram-options button')
-                    .removeClass('active')
-                    .attr('aria-pressed', 'false');
-
-                $(this)
-                    .addClass('active')
-                    .attr('aria-pressed', 'true');
-
-                $('#selectedRam').val($(this).data('ram'));
-            });
-
-            // Clear quantity validation
-            $('#number').on('input', function () {
-                this.setCustomValidity('');
-            });
-
-            // Demo Add to Cart
-            $('#productOrderForm').on('submit', function (event) {
-                event.preventDefault();
-
-                var quantityInput = document.getElementById('number');
-                var quantity = Number(quantityInput.value);
-
-                if (!Number.isInteger(quantity) || quantity < 1) {
-                    quantityInput.setCustomValidity(
-                        'Vui lòng nhập số nguyên lớn hơn 0.'
-                    );
-
-                    quantityInput.reportValidity();
-                    return;
-                }
-
-                quantityInput.setCustomValidity('');
-
-                var color = $('#color').val();
-                var ram = $('#selectedRam').val();
-
-                var currentCount = Number(
-                    $('.cart-badge').first().text()
-                );
-
-                var newCount = currentCount + quantity;
-
-                $('.cart-badge').text(newCount);
-
-                $('.cart-badge').closest('a').attr(
-                    'aria-label',
-                    'Giỏ hàng, ' + newCount + ' sản phẩm'
-                );
-
-                $('#productFeedback')
-                    .text(
-                        'Đã thêm ' + quantity +
-                        ' Laptop 14 inch, màu ' + color +
-                        ', RAM ' + ram +
-                        ' vào giỏ hàng mô phỏng.'
-                    )
-                    .prop('hidden', false);
-            });
-
-            // Other Products
-            $('[data-toggle="tooltip"]').tooltip();
-
-            $('.related-add').on('click', function () {
-                var productName = $(this).attr('data-name');
-
-                var count = Number(
-                    $('.cart-badge').first().text()
-                ) + 1;
-
-                $('.cart-badge').text(count);
-
-                $('.cart-badge').closest('a').attr(
-                    'aria-label',
-                    'Giỏ hàng, ' + count + ' sản phẩm'
-                );
-
-                $('#relatedFeedback')
-                    .text(
-                        'Đã thêm 1 ' + productName +
-                        ' vào giỏ hàng mô phỏng.'
-                    )
-                    .prop('hidden', false);
-            });
-
-            // Reviewer
-            var reviewCount = 3;
-            var reviewScoreTotal = 12;
-
-            $('#reviewForm').on('submit', function (event) {
-                event.preventDefault();
-
-                var name = $.trim($('#reviewName').val());
-                var message = $.trim($('#reviewText').val());
-                var rating = Number($('#reviewRating').val());
-
-                if (!name || !message ||
-                    !Number.isInteger(rating) ||
-                    rating < 1 || rating > 5) {
-                    return;
-                }
-
-                reviewCount += 1;
-                reviewScoreTotal += rating;
-
-                var average = reviewScoreTotal / reviewCount;
-                var rounded = Math.round(average);
-
-                $('#reviewCount').text(
-                    reviewCount + ' đánh giá (gồm dữ liệu mẫu)'
-                );
-
-                $('#averageRating').text(
-                    average.toFixed(1) + ' sao'
-                );
-
-                $('#reviewStars .glyphicon').each(function (index) {
-                    $(this)
-                        .toggleClass(
-                            'glyphicon-star',
-                            index < rounded
-                        )
-                        .toggleClass(
-                            'glyphicon-star-empty',
-                            index >= rounded
-                        );
-                });
-
-                $('#reviewStars').attr(
-                    'aria-label',
-                    'Đánh giá trung bình ' +
-                    average.toFixed(1) + ' trên 5 sao'
-                );
-
-                var item = $(
-                    '<div class="panel panel-default review-item"></div>'
-                );
-
-                var body = $('<div class="panel-body"></div>');
-
-                body.append(
-                    $('<strong></strong>').text(name + ' ')
-                );
-
-                body.append(
-                    $('<span class="text-warning"></span>').text(
-                        '★'.repeat(rating) +
-                        '☆'.repeat(5 - rating)
-                    )
-                );
-
-                body.append(
-                    $('<p></p>').text(message)
-                );
-
-                item.append(body);
-                $('#reviewEntries').prepend(item);
-
-                this.reset();
-                $('#reviewModal').modal('hide');
-            });
-
-        });
-    </script>
-
+    <script src="assets/js/techstore-stock.js"></script>
+    <script src="assets/js/techstore-labels.js"></script>
+    <script src="assets/vendor/bootstrap-star-rating/js/star-rating.min.js"></script>
+    <script src="assets/vendor/bootstrap-star-rating/themes/krajee-svg/theme.min.js"></script>
+    <script src="assets/js/techstore-rating.js"></script>
 </body>
 </html>
