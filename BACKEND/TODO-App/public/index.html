@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>TODO | Quản lý công việc</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><span class="brand-icon">✓</span><div>TODO<span>Không gian cá nhân</span></div></div>
+  <div class="nav-label">QUẢN LÝ</div>
+  <nav aria-label="Điều hướng chính">
+    <button class="nav active" data-view="tasks" data-scope="today"><span>◷</span> Hôm nay</button>
+    <button class="nav" data-view="tasks" data-scope="all"><span>☷</span> Tất cả công việc</button>
+    <button class="nav" data-view="tasks" data-scope="overdue"><span>!</span> Quá hạn</button>
+    <button class="nav" data-view="stats"><span>▥</span> Thống kê</button>
+  </nav>
+  <div class="sidebar-footer"><span class="dot"></span><span id="mode">Đang kết nối</span></div>
+</aside>
+<main>
+<header class="top"><span>WORKSPACE / CÁ NHÂN</span><span id="date-label"></span></header>
+<section id="tasks-view">
+  <div class="heading"><div><div class="eyebrow">KẾ HOẠCH CỦA BẠN</div><h1 id="page-title">Hôm nay</h1><p>Sắp xếp công việc, tập trung vào điều quan trọng.</p></div><button class="primary" id="add">+ Thêm công việc</button></div>
+  <div class="metrics" id="task-metrics"></div>
+  <div class="panel">
+    <div class="panel-head"><h2>Danh sách công việc</h2><span id="result-count"></span></div>
+    <div class="filters">
+      <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Tìm kiếm công việc..." aria-label="Tìm kiếm công việc"></label>
+      <select id="status" aria-label="Lọc trạng thái"><option value="all">Mọi trạng thái</option><option value="todo">Chưa làm</option><option value="doing">Đang làm</option><option value="done">Hoàn thành</option></select>
+      <select id="category" aria-label="Lọc danh mục"><option value="all">Mọi danh mục</option><option value="study">Học tập</option><option value="work">Công việc</option><option value="personal">Cá nhân</option></select>
+      <select id="priority" aria-label="Lọc ưu tiên"><option value="all">Mọi ưu tiên</option><option value="high">Cao</option><option value="medium">Vừa</option><option value="low">Thấp</option></select>
+      <button class="quiet" id="reset">Đặt lại</button>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th>Công việc</th><th>Danh mục</th><th>Hạn hoàn thành</th><th>Ưu tiên</th><th>Trạng thái</th><th>Thao tác</th></tr></thead><tbody id="task-list"></tbody></table></div>
+    <div id="empty" hidden>Không tìm thấy công việc phù hợp.</div>
+  </div>
+</section>
+<section id="stats-view" hidden>
+  <div class="heading"><div><div class="eyebrow">TỔNG QUAN</div><h1>Thống kê công việc</h1><p>Theo dõi tiến độ từ dữ liệu công việc hiện có.</p></div></div>
+  <div class="metrics" id="stats-metrics"></div>
+  <div class="charts"><div class="panel chart"><h2>Tiến độ hoàn thành</h2><div id="progress-ring" class="ring"><div><strong id="rate">0%</strong><span>Hoàn thành</span></div></div><div id="status-breakdown"></div></div><div class="panel chart"><h2>Công việc theo danh mục</h2><div id="categories"></div><h2 class="subhead">Hạn công việc 7 ngày gần đây</h2><div class="legend">Tổng công việc / đã hoàn thành</div><div id="trend"></div></div></div>
+</section>
+<p class="foot">TODO App · Quản lý công việc cá nhân</p>
+</main></div>
+<dialog id="editor"><form id="task-form"><div class="dialog-head"><h2 id="form-title">Thêm công việc</h2><button type="button" id="close" class="quiet" aria-label="Đóng">✕</button></div><label>Tên công việc<input name="title" required maxlength="150" placeholder="Nhập tên công việc"></label><label>Mô tả<textarea name="description" maxlength="1000" rows="3" placeholder="Ghi chú thêm"></textarea></label><div class="form-grid"><label>Hạn hoàn thành<input type="date" name="due_date" required></label><label>Danh mục<select name="category"><option value="study">Học tập</option><option value="work">Công việc</option><option value="personal">Cá nhân</option></select></label><label>Ưu tiên<select name="priority"><option value="low">Thấp</option><option value="medium">Vừa</option><option value="high">Cao</option></select></label><label>Trạng thái<select name="status"><option value="todo">Chưa làm</option><option value="doing">Đang làm</option><option value="done">Hoàn thành</option></select></label></div><p id="form-error" role="alert"></p><div class="form-actions"><button type="button" class="quiet" id="cancel">Hủy</button><button class="primary" type="submit">Lưu công việc</button></div></form></dialog>
+<div id="toast" role="status" hidden></div><script src="app.js"></script>
+</body></html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<style>
+	div.at-container {
+		display: flex;
+		flex-direction: column; 
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+		height: 100vh;
+	}
+	.at-item {
+		color: #3079ed; font-weight:bold; font-size:3em;
+		animation: text-shadow-multicolor2 1.2s linear 0s 1 normal forwards;
+	}
+	@keyframes text-shadow-multicolor2 {
+		0% {
+			text-shadow:0 0 black, 0 0 red, 0 0 orange,0 0 yellow,0 0 green,0 0 skyblue,0 0 blue,0 0 white;
+			transform:translateX(0) translateY(0);
+		}
+		100% {
+			text-shadow:-1px -1px black,-3px -3px red,-5px -5px orange,-7px -7px yellow,-9px -9px green,-11px -11px skyblue,-13px -13px blue,-15px -15px white;
+			transform:translateX(8px) translateY(8px);
+		}
+	}
+
+	.logo {
+		height: 120px;
+		animation: rotateIn 1s 1.2s both;
+	}
+	@keyframes rotateIn {
+		from {
+			transform-origin: center;
+			transform: rotate3d(0, 0, 1, -200deg);
+			opacity: 0;
+		}
+		to {
+			transform-origin: center;
+			transform: none;
+			opacity: 1;
+		}
+	}
+</style>
+</head>
+<body>
+<div class='at-container'>
+	<div class='at-item'>ĐẠI HỌC UEH</div>
+	<img class='logo' src='https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png' alt='Logo BIT UEH'>
+</div>
+</body>
+</html>

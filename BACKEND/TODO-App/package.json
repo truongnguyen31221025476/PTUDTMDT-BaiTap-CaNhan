@@ -1,0 +1,1 @@
+{"name":"personal-todo-app","version":"1.0.0","private":true,"description":"Personal task manager","scripts":{"start":"node server.js","demo":"node server.js --memory","test":"node --test tests/api.test.js"},"engines":{"node":">=22.13.0"}}
